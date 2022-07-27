@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\CompanyProfileController;
+use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\BlogsController;
 
 
 /*
@@ -23,7 +27,22 @@ Route::get('/', function () {
 
 Route::get('/language/{lang}', [LanguageController::class, 'change_laguage'])->name('language.change');
 
+// ABOUT ROUTES
 Route::get('/about', [AboutController::class, 'index'])->name('about');
+
+// COMPANY PROFILE ROUTES
+Route::get('/profile', [CompanyProfileController::class, 'index'])->name('profile');
+
+// SERVICES ROUTES
+Route::get('/services', [ServicesController::class, 'index'])->name('services');
+
+// PROJECTS ROUTES
+Route::get('/projects', [ProjectsController::class, 'index'])->name('projects');
+
+// BLOGS ROUTES
+Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
+
+// CONTACTS ROUTES
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    {{ __('app.about') }}
+{{ __('app.f_d') }} | {{ __('app.about') }}
 @endsection
 
 @section('content')
