@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicesTable extends Migration
+class CreateSliderTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('slider', function (Blueprint $table) {
             $table->id();
-            $table->string('name_ar')->nullable();
-            $table->string('name_en')->nullable();
+            $table->string('image')->nullable();
+            $table->string('title_ar')->nullable();
+            $table->string('title_en')->nullable();
             $table->text('desc_ar')->nullable();
             $table->text('desc_en')->nullable();
-            $table->string('image')->nullable();
-            $table->unsignedBigInteger('added_by')->nullable();
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('slider');
     }
 }

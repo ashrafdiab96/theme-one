@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactsController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\CompanyProfileController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\WelcomeController;
 
 
 /*
@@ -21,10 +23,10 @@ use App\Http\Controllers\BlogsController;
 |
 */
 
-Route::get('/', function () {
-    return view('client.home');
-});
+// HOME ROUTES
+Route::get('/', [WelcomeController::class, 'index'])->name('about');
 
+// LANGUAGE ROUTE
 Route::get('/language/{lang}', [LanguageController::class, 'change_laguage'])->name('language.change');
 
 // ABOUT ROUTES

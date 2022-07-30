@@ -105,6 +105,13 @@
 
 /* End main navbar */
 
+/* Start footer */
+.footer-map iframe {
+    height: 180px;
+    width: 300px;
+}
+/* End footer */
+
 /* Start home page */
 /* slider */
 .home-slider {
@@ -200,6 +207,10 @@
     letter-spacing: 2px;
 }
 
+.services .main-title .services-desc h2 {
+    font-weight: bolder !important;
+}
+
 .services .main-title .services-desc::after {
     content: ' ';
     display: block;
@@ -272,6 +283,130 @@
 
 .services .service-content .service-overlay * {
     color: #fff;
+}
+
+.break-line {
+    width: 82%;
+    margin: auto;
+}
+
+.projects-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.projects-title h2 {
+    position: relative;
+    font-weight: bolder;
+}
+
+.projects-title h2::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    height: 5px;
+    width: 69%;
+    background-color: rgba(0,0,0,.5);
+}
+
+.projects {
+    padding: 50px;
+}
+
+.projects .project {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.projects .project .project-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.projects .project .project-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 150%;
+    right: 0;
+    left: 0;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    -webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -ms-transition:all 1s ease;
+    -o-transition:all 1s ease;
+    transition:all 1s ease;
+    color: #fff;
+}
+
+.projects .project:hover .project-overlay {
+    top: 0;
+}
+
+.blogs {
+    padding: 100px;
+    background-color: #f2f1ed;
+}
+
+.blogs-title h2 {
+    position: relative;
+    font-weight: bolder;
+}
+
+.blogs-title h2::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    height: 5px;
+    width: 13%;
+    background-color: rgba(0,0,0,.5);
+}
+
+.blogs-title .blogs-desc {
+    font-size: 1.2em;
+    word-spacing: 2px;
+}
+
+.blogs .recent-blogs {
+    position: relative;
+    height: 450px;
+}
+
+.blogs .recent-blogs .blog-img {
+    height: 100%;
+    width: 100%;
+}
+
+.blogs .recent-blogs .blog-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.blogs .recent-blogs .blog-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* End home page */

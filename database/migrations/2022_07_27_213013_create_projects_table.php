@@ -17,8 +17,8 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name_ar')->nullable();
             $table->string('name_en')->nullable();
-            $table->string('desc_ar')->nullable();
-            $table->string('desc_en')->nullable();
+            $table->text('desc_ar')->nullable();
+            $table->text('desc_en')->nullable();
             $table->string('image')->nullable();
             $table->unsignedBigInteger('added_by')->nullable();
             $table->foreign('added_by')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
