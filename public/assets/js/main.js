@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
     const showClass = "show";
 
     $(window).on("load resize", () => {
-    if (this.matchMedia("(min-width: 768px)").matches) {
+    if ($(window).width() > 992) {
         $dropdown.hover(
         function() {
             const $this = $(this);
@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
 
     /* Start slider */
     var splide = new Splide('.splide', {
-        // autoplay: 'true',
+        autoplay: 'true',
     });
     splide.mount();
     /* End slider */

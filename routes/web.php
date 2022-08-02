@@ -37,12 +37,15 @@ Route::get('/profile', [CompanyProfileController::class, 'index'])->name('profil
 
 // SERVICES ROUTES
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
+Route::get('/service/{id}', [ServicesController::class, 'service'])->name('service');
 
 // PROJECTS ROUTES
 Route::get('/projects', [ProjectsController::class, 'index'])->name('projects');
+Route::get('/project/{id}', [ProjectsController::class, 'project'])->name('project');
 
 // BLOGS ROUTES
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
+Route::get('/blog/{id}', [BlogsController::class, 'blog'])->name('blog');
 
 // CONTACTS ROUTES
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
