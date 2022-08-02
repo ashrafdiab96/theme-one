@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\CompanyProfileController;
 use App\Http\Controllers\ServicesController;
@@ -50,6 +51,11 @@ Route::get('/blog/{id}', [BlogsController::class, 'blog'])->name('blog');
 // CONTACTS ROUTES
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
 Route::post('/contact/message', [ContactsController::class, 'message'])->name('message');
+
+
+// ADMIN ROUTES
+// DASHBOARD ROUTES
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 Auth::routes();
