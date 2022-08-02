@@ -20,7 +20,7 @@
                 @foreach ($services as $service)
                     <div class="col-md-4">
                         <div class="service">
-                            <a href="">
+                            <a href="{{ url('service/'.$service->id) }}">
                                 <div class="service-img">
                                     <img src="{{ asset('assets/upload/services/'.$service->image) }}" alt="Service Image">
                                 </div>

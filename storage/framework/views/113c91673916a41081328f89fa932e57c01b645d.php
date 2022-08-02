@@ -19,7 +19,7 @@
                 <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-4">
                         <div class="service">
-                            <a href="">
+                            <a href="<?php echo e(url('service/'.$service->id)); ?>">
                                 <div class="service-img">
                                     <img src="<?php echo e(asset('assets/upload/services/'.$service->image)); ?>" alt="Service Image">
                                 </div>
