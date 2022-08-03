@@ -1261,9 +1261,9 @@
 
 .contacts-form {
     padding: 20px;
-    background-color: #c3c3c31a;
+    background-color: #121212a1;
     width: 100%;
-    color: #000;
+    color: #fff;
     -webkit-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
     -moz-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
     -ms-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
@@ -1271,13 +1271,17 @@
     box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
 }
 
+.contacts-form .contacts-form-title p {
+    color: #ccc;
+}
+
 .contacts-form .contacts-form-title h5::after {
     content: ' ';
     display: block;
-    height: 3px;
+    height: 2px;
     width: 28%;
     margin: auto;
-    background-color: #676767;
+    background-color: #000;
 }
 
 @media (max-width: 992px) {
@@ -1300,7 +1304,7 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #676767;
+    border-bottom: 1px solid #000;
     border-radius: 0;
 }
 
@@ -1308,17 +1312,24 @@ textarea {
     resize: none;
 }
 
+button:focus,
+button:active {
+    box-shadow: none;
+    outline: none;
+}
+
 .contacts-form button {
     background-color: #2a2a2a;
     color: #fff;
     padding: 5px 40px;
     border-radius: 0;
+    box-shadow: none;
 }
 
 .contacts-form button:hover {
     background-color: #c3c3c31a;
-    color: #000;
-    border: 1px solid #676767;
+    color: #fff;
+    border: 1px solid #000;
 }
 
 .form-req {

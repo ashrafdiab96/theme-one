@@ -58,7 +58,7 @@
                     <div class="contacts-form">
                         <div class="msg-form-success"></div>
                         <div class="contacts-form-title">
-                            <p class="text-capitalize text-muted text-center m-0 p-0">{{ __('app.contact_now') }}</p>
+                            <p class="text-capitalize text-center m-0 p-0">{{ __('app.contact_now') }}</p>
                             <h5 class="text-capitalize text-center">{{ __('app.we_contact_soon') }}</h5>
                         </div>
                         <div class="form-group m-auto">

@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="first-services py-3">
-                        <h2 class="text-capitalize project-page-sub-title">{{ __('app.services') }}</h2>
+                        <h2 class="text-capitalize project-page-sub-title">{{ __('app.projects') }}</h2>
                         @foreach ($first_projects as $serv)
                             <a href="{{ url('project/'.$serv->id) }}" class="text-capitalize project-page-link">
                                 <p class="py-2 m-0">
