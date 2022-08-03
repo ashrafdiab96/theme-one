@@ -1,4 +1,5 @@
 /* Start top navbar */
+
 .top-nav {
     height: 40px;
     width: 100%;
@@ -23,12 +24,10 @@
     .top-nav {
         height: 80px;
     }
-
     .top-nav .row {
         flex-shrink: 1;
         flex-grow: 0;
     }
-
     .top-nav-mail,
     .top-nav-phone,
     .top-nav-lang {
@@ -46,9 +45,13 @@
 .top-nav * {
     color: #fff !important;
 }
+
+
 /* End top navbar */
 
+
 /* Start main navbar */
+
 .main-nav-cont {
     background-color: #fff;
     height: 85px;
@@ -100,7 +103,7 @@
     right: 0;
     pointer-events: none;
     height: 8px;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .main-logo {
@@ -134,9 +137,13 @@
     background-color: #fff;
     color: rgba(0, 0, 0, 0.6);
 }
+
+
 /* End main navbar */
 
+
 /* Start footer */
+
 .footer {
     background-color: #2a2a2a;
     color: #fff;
@@ -183,7 +190,7 @@
 }
 
 .copy-footer p {
-    word-spacing:4px;
+    word-spacing: 4px;
     letter-spacing: 2px;
 }
 
@@ -206,10 +213,16 @@
         width: 100%;
     }
 }
+
+
 /* End footer */
 
+
 /* Start home page */
+
+
 /* slider */
+
 .home-slider {
     height: 600px;
 }
@@ -243,7 +256,7 @@
     font-weight: 900;
 }
 
-.home-slider .slider-all .slider-content .slider-desc  {
+.home-slider .slider-all .slider-content .slider-desc {
     width: 60%;
     text-align: center;
 }
@@ -277,7 +290,9 @@
     }
 }
 
+
 /* services */
+
 .services {
     /* background-color: gray; */
     padding: 50px;
@@ -312,7 +327,7 @@
     display: block;
     pointer-events: none;
     height: 2px;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .services .service-content {
@@ -339,11 +354,11 @@
     width: 100%;
     padding: 10px;
     text-align: center;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .services .service-title * {
@@ -366,11 +381,11 @@
     align-items: center;
     flex-direction: column;
     text-decoration: none;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .services .service-content:hover .service-overlay {
@@ -409,8 +424,8 @@
     right: 0;
     pointer-events: none;
     height: 5px;
-    width: 69%;
-    background-color: rgba(0,0,0,.5);
+    width: 30%;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .projects {
@@ -440,11 +455,11 @@
     align-items: center;
     flex-direction: column;
     text-decoration: none;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
     color: #fff;
 }
 
@@ -472,8 +487,8 @@
     right: 0;
     pointer-events: none;
     height: 5px;
-    width: 13%;
-    background-color: rgba(0,0,0,.5);
+    width: 7%;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .blogs-title .blogs-desc {
@@ -505,9 +520,12 @@
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+
 /* End home page */
 
+
 /* Start about page */
+
 .about-header {
     position: relative;
     background-size: 100% 100%;
@@ -560,9 +578,13 @@
     font-size: 34px !important;
     font-weight: bolder !important;
 }
+
+
 /* End about page */
 
+
 /* Start company profile page */
+
 .profile-header {
     position: relative;
     background-size: 100% 100%;
@@ -613,9 +635,13 @@
         width: auto;
     }
 }
+
+
 /* End company profile page */
 
+
 /* Start services page */
+
 .services-header {
     position: relative;
     background-size: 100% 100%;
@@ -660,11 +686,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .services-content .service .service-overlay {
@@ -678,11 +704,11 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .services-content .service:hover .service-overlay {
@@ -692,9 +718,13 @@
 .services-content .service:hover .service-desc {
     bottom: -50%;
 }
+
+
 /* End services page */
 
+
 /* Start service page */
+
 .service-header {
     position: relative;
     background-size: 100% 100%;
@@ -794,9 +824,13 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .1);
 }
+
+
 /* End service page */
 
+
 /* Start projects page */
+
 .projects-header {
     position: relative;
     background-size: 100% 100%;
@@ -841,11 +875,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .projects-content .project .project-overlay {
@@ -859,11 +893,11 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .projects-content .project:hover .project-overlay {
@@ -873,9 +907,13 @@
 .projects-content .project:hover .project-desc {
     bottom: -50%;
 }
+
+
 /* End projects page */
 
+
 /* Start project page */
+
 .project-header {
     position: relative;
     background-size: 100% 100%;
@@ -975,9 +1013,13 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .1);
 }
+
+
 /* End project page */
 
+
 /* Start blogs page */
+
 .blogs-header {
     position: relative;
     background-size: 100% 100%;
@@ -1022,11 +1064,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .blogs-content .blog .blog-overlay {
@@ -1040,11 +1082,11 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    -webkit-transition:all 1s ease;
-    -moz-transition:all 1s ease;
-    -ms-transition:all 1s ease;
-    -o-transition:all 1s ease;
-    transition:all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .blogs-content .blog:hover .blog-overlay {
@@ -1054,9 +1096,13 @@
 .blogs-content .blog:hover .blog-desc {
     bottom: -50%;
 }
+
+
 /* End blogs page */
 
+
 /* Start blog page */
+
 .blog-header {
     position: relative;
     background-size: 100% 100%;
@@ -1156,9 +1202,13 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .1);
 }
+
+
 /* End blog page */
 
+
 /* Start contacts page */
+
 .contacts-header {
     position: relative;
     background-size: 100% 100%;
@@ -1274,4 +1324,6 @@ textarea {
 .form-req {
     color: red;
 }
+
+
 /* End contacs page */
