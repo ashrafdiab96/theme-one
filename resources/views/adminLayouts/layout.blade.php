@@ -18,21 +18,16 @@
     {{-- <link rel="stylesheet" href="{{ asset('assets/adminLTE/dist/css/custom.css') }}"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="http://www.jqueryscript.net/css/jquerysctipttop.css" type="text/css">
+    <link rel="icon" href="{{ asset('assets/css/admin-style.css') }}">
     <link rel="icon" href="{{ url('assets/icons/main_icon.png') }}">
 
 </head>
-<body>
-    {{-- @include('layouts.topNav') --}}
-    @include('adminLayouts.navbar')
+<body style="height: 100%;">
 
     <section class="admin-page">
-        @yield('admin-content')
+        @yield('main-admin-content')
     </section>
 
-    @include('adminLayouts.footer')
-
-    {{-- <script src="{{ asset('asset/AdminLTE/plugins/jquery/jquery.min.js') }}"></script> --}}
-    {{-- <script src="{{ asset('asset/AdminLTE/plugins/jquery-ui/jquery-ui.min.js') }}"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.rtlcss.com/bootstrap/v4.4.1/js/bootstrap.min.js" integrity="sha384-8RqFNshIrK8FARYG0cBLv7D4Y2hXNUPHVWohv3STbDMZh6BU4LNoAJUA3mjCH6Zx" crossorigin="anonymous"></script>

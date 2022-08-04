@@ -1,0 +1,19 @@
+/* html,
+body,
+.admin-page {
+    height: 100% !important;
+} */
+
+.login-pag {
+    background: aquamarine !important;
+}
+
+.main-header .profile-pic {
+    width: 125px !important;
+    height: 125px !important;
+    -webkit-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    -ms-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    -o-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);;
+}

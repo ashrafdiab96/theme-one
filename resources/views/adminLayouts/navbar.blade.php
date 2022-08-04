@@ -1,13 +1,27 @@
-<div class="wrapper" style="min-height: 1200px;">
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light horizontal-navbar p-0">
+<style>
+    .main-header .profile-pic {
+    width: 125px !important;
+    height: 125px !important;
+    -webkit-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    -ms-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    -o-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
+}
+
+.active-nav-link {
+    background-color: #fff !important;
+    color: #343a40 !important;
+}
+
+</style>
+
+<div class="wrapper" style="min-height: auto">
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light horizontal-navbar">
         <ul class="navbar-nav lan-ul">
             <li class="nav-item" style="cursor: pointer;">
                 <a class="nav-link text-dark"><i class="fas fa-bars mt-1"></i></a>
             </li>
-        </ul>
-
-        <ul class="navbar-nav notifi-ul">
-
         </ul>
 
         <ul class="navbar-nav logout-ul h-100">
@@ -15,26 +29,26 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu open">
                         <a style="cursor: pointer;" class="dropdown-toggle main-prof" data-toggle="dropdown" aria-expanded="true">
-                            <img src="" class="user-image main-prof-img" alt="User Image">
-                            {{-- <img v-else :src="noImg" class="user-image main-prof-img rounded-circle" alt="User Image"> --}}
-                            <span class="hidden-xs main-prof-name">Username</span>
+                            <img src="{{ asset('assets/images/employee.png') }}" style="height: 40px; width: 40px;" class="user-image" alt="User Image">
+                            <span class="hidden-xs main-prof-name">{{ Auth::user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu main-prof-dropdown">
                             <li class="user-header">
-                                <img class="img-circle" alt="User Image">
-                                {{-- <img v-else :src="noImg" class="user-image main-prof-img rounded-circle" alt="User Image"> --}}
+                                <img src="{{ asset('assets/images/employee.png') }}" class="img-circle profile-pic" alt="User Image">
                                 <p class="text-white">
-                                    <span>Username</span>
+                                    <span>{{ Auth::user()->name }}</span>
                                 </p>
                             </li>
                             <li class="user-footer main-prf-btns">
                                 <div class="pull-left prof-btn">
-                                    <a href="{name: 'user.personal_profile'}" data-toggle="modal" class="btn btn-default btn-flat" id="admin_profile">
+                                    <a href="" data-toggle="modal" class="btn btn-default btn-flat" id="admin_profile">
                                         Profile
                                     </a>
                                 </div>
                                 <div class="pull-right prof-btn">
-                                    <a class="btn btn-default btn-flat">Logout</a>
+                                    <a href="{{ url('/admin/logout') }}" class="btn btn-default btn-flat">
+                                        Logout
+                                    </a>
                                 </div>
                             </li>
                         </ul>
@@ -45,18 +59,18 @@
     </nav>
     <!-- side navigation bar -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <a href="#" class="brand-link text-center app-logo">
-            <h4 class="brand-text font-weight-light text-uppercase">F&D</h4>
-        </a>
+        <span class="brand-link text-center app-logo">
+            <h4 class="brand-text font-weight-light text-uppercase m-0">F&D Engineering</h4>
+        </span>
 
         <!-- user information -> show for all -->
         <a href="#" style="text-decoration: none;">
             <div class="user-panel mt-3 pb-3 mb-3 d-flex user-panel-custom">
                 <div class="image">
-                    <img src="" class="img-circle elevation-2" alt="User Image" style="width: 3.1rem; height: 100%;">
+                    <img src="{{ asset('assets/images/employee.png') }}" class="img-circle elevation-2" alt="User Image" style="width: 3.1rem; height: 100%;">
                 </div>
                 <div class="info d-flex align-items-center mt-2">
-                    <h6 class="d-block text-white">Username</h6>
+                    <h6 class="d-block text-white">{{ Auth::user()->name }}</h6>
                 </div>
             </div>
         </a>
@@ -66,18 +80,58 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                     <li class="nav-item navbar-link">
+                        <a href="{{ url('/admin/dashboard') }}" class="nav-link {{ request()->is('admin/dashboard') ? 'active-nav-link' : '' }}">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
+                        <a href="#" class="nav-link {{ request()->is('admin/home') ? 'active-nav-link' : '' }}">
+                            <i class="fas fa-home"></i>
+                            <p>Home</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                <span>Home</span>
-                            </p>
+                            <i class="fas fa-address-card"></i>
+                            <p>About</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-building"></i>
+                            <p>Company Profile</p>
                         </a>
                     </li>
 
                     <li class="nav-item navbar-link">
                         <a href="#" class="nav-link text-capitalize">
-                            <i class="nav-icon fa fa-calendar"></i>
-                            <p>Test</p>
+                            <i class="fab fa-servicestack"></i>
+                            <p>Services</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
+                        <a href="#" class="nav-link text-capitalize">
+                            <i class="fas fa-project-diagram"></i>
+                            <p>Projects</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
+                        <a href="#" class="nav-link text-capitalize">
+                            <i class="fas fa-blog"></i>
+                            <p>Blogs</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
+                        <a href="#" class="nav-link text-capitalize">
+                            <i class="far fa-address-card"></i>
+                            <p>Contacts</p>
                         </a>
                     </li>
 
