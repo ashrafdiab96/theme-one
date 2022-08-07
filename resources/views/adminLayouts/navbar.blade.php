@@ -101,35 +101,35 @@
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link">
+                        <a href="{{ url('admin/profile') }}" class="nav-link {{ request()->is('admin/profile') || request()->is('admin/profile/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-building"></i>
                             <p>Company Profile</p>
                         </a>
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link text-capitalize">
+                        <a href="#" class="nav-link">
                             <i class="fab fa-servicestack"></i>
                             <p>Services</p>
                         </a>
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link text-capitalize">
+                        <a href="#" class="nav-link">
                             <i class="fas fa-project-diagram"></i>
                             <p>Projects</p>
                         </a>
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link text-capitalize">
+                        <a href="#" class="nav-link">
                             <i class="fas fa-blog"></i>
                             <p>Blogs</p>
                         </a>
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link text-capitalize">
+                        <a href="{{ url('admin/contacts') }}" class="nav-link {{ request()->is('admin/contacts') || request()->is('admin/contacts/*') ? 'active-nav-link' : '' }}">
                             <i class="far fa-address-card"></i>
                             <p>Contacts</p>
                         </a>

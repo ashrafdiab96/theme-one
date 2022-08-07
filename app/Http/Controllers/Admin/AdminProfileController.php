@@ -3,25 +3,65 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profile;
+use Exception;
 use Illuminate\Http\Request;
 
 class AdminProfileController extends Controller
 {
+    /**
+     * index function
+     * show profile page
+     * @return view
+     */
     public function index ()
     {
-        return view();
+        $profile = Profile::first();
+        return view('admin.profile.profile', compact('profile'));
     }
 
-    public function save (Request $request)
-    {}
+    /**
+     * index function
+     * edit profile data
+     * @return view
+     */
+    public function edit ()
+    {
+        $profile = Profile::first();
+        return view('admin.profile.edit', compact('profile'));
+    }
 
-    public function edit (Request $request, $id)
-    {}
+    /**
+     * update function
+     * update profile data
+     * @param Request $request
+     * @return redirect
+     */
+    public function update (Request $request)
+    {
+        try {
+            $profile = Profile::first();
+            $profile->missions_ar = $request->missions_ar;
+            $profile->missions_en = $request->missions_en;
+            $profile->vision_ar = $request->vision_ar;
+            $profile->vision_en = $request->vision_en;
+            $profile->strength_ar = $request->strength_ar;
+            $profile->strength_en = $request->strength_en;
+            if($request->hasFile('background')) {
+                $old_img = public_path('assets/upload/profile/').$profile->background;
+                if(isset($old_img)) {
+                    unlink($old_img);
+                }
+                $image_name = time().'_'.$request->file('background')->getClientOriginalName();
+                $filePath = $request->file('background')->move('assets/upload/profile', $image_name);
+                $profile->background = time().'_'.$request->file('background')->getClientOriginalName();
+            }
+            $profile ->save();
+            return redirect()->to('/admin/profile')->with('profile_success', 'Profile data has been updated successfully');
 
-    public function update (Request $request, $id)
-    {}
-
-    public function delete ($id)
-    {}
+        } catch(Exception $e) {
+            return redirect()->to('/admin/profile')->with('profile_fail', 'An unexpected error occured');
+        }
+    }
 
 }

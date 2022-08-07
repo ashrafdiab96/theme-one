@@ -71,12 +71,6 @@
                             <button type="submit" class="btn btn-success">Update</button>
                         </div>
                     </form>
-                    {{-- <form method="POST" action="{{ url('/test') }}" enctype="multipart/form-data">
-                        @csrf
-                        <input type="text" name="x">
-                        <input type="file" name="y">
-                        <button type="submit">test</button>
-                    </form> --}}
                 </div>
             </div>
         </div>

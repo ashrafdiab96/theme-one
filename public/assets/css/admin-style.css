@@ -1,13 +1,10 @@
-/* html,
-body,
-.admin-page {
-    height: 100% !important;
-} */
-
+/* Start login page */
 .login-page {
-    background: aquamarine !important;
+    background: #464646 !important;
 }
+/* End login page */
 
+/* Start dashboard */
 .main-header .profile-pic {
     width: 125px !important;
     height: 125px !important;
@@ -17,3 +14,52 @@ body,
     -o-box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);
     box-shadow: 0 0 3px 0 rgb(0 0 0 / 50%);;
 }
+/* End dashboard */
+
+/* Start about page */
+.about-img-bc {
+    width: 700px;
+    height: 200px;
+}
+
+.about-img {
+    width: 300px;
+    height: 250px;
+}
+
+@media(max-width: 992px) {
+    .about-img-bc,
+    .about-img {
+        width: auto;
+        height: auto;
+    }
+}
+/* End about page */
+
+/* Start profile page */
+.profile-img-bc {
+    width: 700px;
+    height: 200px;
+}
+
+@media(max-width: 992px) {
+    .profile-img-bc {
+        width: auto;
+        height: auto;
+    }
+}
+/* End profile page */
+
+/* Start contacts page */
+.contacts-img-bc {
+    width: 700px;
+    height: 200px;
+}
+
+@media(max-width: 992px) {
+    .contacts-img-bc {
+        width: auto;
+        height: auto;
+    }
+}
+/* End contacts page */

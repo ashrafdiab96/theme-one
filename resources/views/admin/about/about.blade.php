@@ -84,19 +84,19 @@
                                     <tr>
                                         <th class="w-25">About page background</th>
                                         <td class="w-75">
-                                            <img src="{{ asset('assets/upload/about/'.$about->background) }}" alt="About page background">
+                                            <img class="about-img-bc" src="{{ asset('assets/upload/about/'.$about->background) }}" alt="About page background">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th class="w-25">Founder 1 image</th>
                                         <td class="w-75">
-                                            <img src="{{ asset('assets/upload/about/'.$about->founder_1_img) }}" alt="About page background">
+                                            <img class="about-img" src="{{ asset('assets/upload/about/'.$about->founder_1_img) }}" alt="Founder image">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th class="w-25">Founder 2 image</th>
                                         <td class="w-75">
-                                            <img src="{{ asset('assets/upload/about/'.$about->founder_2_img) }}" alt="About page background">
+                                            <img class="about-img" src="{{ asset('assets/upload/about/'.$about->founder_2_img) }}" alt="Founder image">
                                         </td>
                                     </tr>
                                 </table>

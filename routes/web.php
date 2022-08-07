@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\AdminAboutController;
+use App\Http\Controllers\Admin\AdminContactsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\ContactsController;
@@ -14,7 +15,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
-
+use App\Http\Controllers\Admin\AdminProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +78,17 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/about', [AdminAboutController::class, 'index'])->name('admin-about');
     Route::get('/admin/about/edit', [AdminAboutController::class, 'edit'])->name('admin-about-edit');
     Route::post('/admin/about/update', [AdminAboutController::class, 'update'])->name('admin-about-update');
+
+    // PROFILE ROUTES
+    Route::get('/admin/profile', [AdminProfileController::class, 'index'])->name('admin-profile');
+    Route::get('/admin/profile/edit', [AdminProfileController::class, 'edit'])->name('admin-profile-edit');
+    Route::post('/admin/profile/update', [AdminProfileController::class, 'update'])->name('admin-profile-update');
+
+    // CONTACTS ROUTES
+    Route::get('/admin/contacts', [AdminContactsController::class, 'index'])->name('admin-contacts');
+    Route::get('/admin/contacts/edit', [AdminContactsController::class, 'edit'])->name('admin-contacts-edit');
+    Route::post('/admin/contacts/update', [AdminContactsController::class, 'update'])->name('admin-contacts-update');
+
 
 });
 
