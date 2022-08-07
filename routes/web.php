@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AdminAboutController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\ContactsController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\Admin\AdminHomeController;
 
 
 /*
@@ -65,6 +67,17 @@ Route::middleware('auth')->group(function() {
 
     // DASHBOARD ROUTES
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // HOME ROUTES
+    Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin-home');
+    Route::get('/admin/home/edit', [AdminHomeController::class, 'edit'])->name('admin-home-edit');
+    Route::post('/admin/home/update', [AdminHomeController::class, 'update'])->name('admin-home-update');
+
+    // ABOUT ROUTES
+    Route::get('/admin/about', [AdminAboutController::class, 'index'])->name('admin-about');
+    Route::get('/admin/about/edit', [AdminAboutController::class, 'edit'])->name('admin-about-edit');
+    Route::post('/admin/about/update', [AdminAboutController::class, 'update'])->name('admin-about-update');
+
 });
 
 

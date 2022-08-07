@@ -66,4 +66,15 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'pulkitjalan/geoip' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'PulkitJalan\\GeoIP\\GeoIPServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'GeoIP' => 'PulkitJalan\\GeoIP\\Facades\\GeoIP',
+    ),
+  ),
 );

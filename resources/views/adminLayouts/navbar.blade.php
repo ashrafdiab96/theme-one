@@ -87,14 +87,14 @@
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link {{ request()->is('admin/home') ? 'active-nav-link' : '' }}">
+                        <a href="{{ url('admin/home') }}" class="nav-link {{ request()->is('admin/home') || request()->is('admin/home/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-home"></i>
                             <p>Home</p>
                         </a>
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link">
+                        <a href="{{ url('admin/about') }}" class="nav-link {{ request()->is('admin/about') || request()->is('admin/about/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-address-card"></i>
                             <p>About</p>
                         </a>

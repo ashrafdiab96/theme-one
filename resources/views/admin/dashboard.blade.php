@@ -1,7 +1,7 @@
 @extends('adminLayouts.app')
 
 @section('admin-title')
-    Dashboard
+    Admin | Dashboard
 @endsection
 
 @section('admin-content')
@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-md-6">
-                    <h1 class="m-0 text-uppercase">Dashboard</h1>
+                    <h2 class="m-0 text-uppercase">Dashboard</h2>
                 </div>
                 <div class="col-md-6">
 
