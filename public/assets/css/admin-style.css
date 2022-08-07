@@ -1,6 +1,33 @@
 /* Start login page */
 .login-page {
-    background: #464646 !important;
+    background: #343a40 !important;
+}
+
+.admin-form {
+    background-color: #686868;
+    color: rgb(255 255 255 / 80%);
+    border-radius: 0;
+}
+
+.admin-form a {
+    color: rgb(255 255 255 / 80%);
+}
+
+.admin-form a:hover {
+    color: rgb(255 255 255 / 40%);
+}
+
+.admin-form input,
+.admin-form input:focus,
+.admin-form input:active {
+    background-color: #484848;
+    color: rgb(255 255 255 / 80%);
+    border-bottom: 1px solid rgb(177 177 177 / 80%);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    box-shadow: none;
+    border-radius: 0;
 }
 /* End login page */
 

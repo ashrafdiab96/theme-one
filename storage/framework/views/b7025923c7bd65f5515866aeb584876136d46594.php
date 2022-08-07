@@ -7,8 +7,10 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Login</div>
+                <div class="card admin-form">
+                    <div class="card-header">
+                        <h5 class="text-uppercase text-center p-0 m-0">Admin Dashboard</h5>
+                    </div>
 
                     <div class="card-body">
                         <?php if(session()->has('login_error')): ?>
@@ -21,9 +23,9 @@
                             <?php echo csrf_field(); ?>
 
                             <div class="row mb-3">
-                                <label for="email" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Email Address')); ?></label>
+                                <label for="email" class="col-md-3 col-form-label text-md-end"><?php echo e(__('Email Address')); ?></label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-7">
                                     <input id="email" type="email" class="form-control <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -49,9 +51,9 @@ unset($__errorArgs, $__bag); ?>
                             </div>
 
                             <div class="row mb-3">
-                                <label for="password" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Password')); ?></label>
+                                <label for="password" class="col-md-3 col-form-label text-md-end"><?php echo e(__('Password')); ?></label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-7">
                                     <input id="password" type="password" class="form-control <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -79,7 +81,7 @@ unset($__errorArgs, $__bag); ?>
                             
 
                             <div class="row mb-0">
-                                <div class="col-md-8 offset-md-4">
+                                <div class="col-md-8 offset-md-3">
                                     <button type="submit" class="btn btn-success btn-sm btn-flat">
                                         Login
                                     </button>
@@ -87,7 +89,7 @@ unset($__errorArgs, $__bag); ?>
                                     <br>
 
                                     <?php if(Route::has('password.request')): ?>
-                                        <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
+                                        <a class="btn btn-link p-0" href="<?php echo e(route('password.request')); ?>">
                                             Forgot Your Password?
                                         </a>
                                     <?php endif; ?>
