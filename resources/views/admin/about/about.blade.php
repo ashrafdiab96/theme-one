@@ -31,7 +31,7 @@
                             <h3 class="card-title m-0">About page content</h3>
                         </div>
                         <div class="col-md-3">
-                            <a class="btn btn-warning" href="{{ url('admin/about/edit') }}">Edit</a>
+                            <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/about/edit') }}">Edit</a>
                         </div>
                     </div>
 
@@ -105,44 +105,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">DataTable</h3>
-                </div>
-
-                <div class="card-body">
-                    <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6"></div>
-                            <div class="col-sm-12 col-md-6"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" aria-describedby="example2_info">
-                                    <thead>
-                                        <tr>
-                                            <th class="sorting" rowspan="1" colspan="1">Rendering engine</th>
-                                            <th class="sorting" rowspan="1" colspan="1">Rendering engine</th>
-                                            <th class="sorting" rowspan="1" colspan="1">Rendering engine</th>
-                                            <th class="sorting" rowspan="1" colspan="1">Rendering engine</th>
-                                            <th class="sorting" rowspan="1" colspan="1">Rendering engine</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="odd">
-                                            <td class="dtr-control sorting_1" tabindex="0">Gecko</td>
-                                            <td>Firefox 1.0</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td>1.7</td>
-                                            <td>A</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 </div>

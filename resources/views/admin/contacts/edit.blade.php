@@ -26,7 +26,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Edit contacts form</h5>
+                    <h5 class="p-0 m-0">Edit contacts form</h5>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ url('/admin/contacts/update') }}" enctype="multipart/form-data">
@@ -88,7 +88,7 @@
                             <input type="file" class="form-control" name="background">
                         </div>
                         <div class="form-group text-center">
-                            <button type="submit" class="btn btn-success">Update</button>
+                            <button type="submit" class="btn btn-success btn-sm btn-flat">Update</button>
                         </div>
                     </form>
                 </div>

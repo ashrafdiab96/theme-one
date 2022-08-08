@@ -162,7 +162,7 @@
                         <div class="card-header border-0">
                             <h3 class="card-title">Recent Users</h3>
                             <div class="card-tools">
-                                <a href="#" class="btn btn-tool btn-sm" title="show">
+                                <a href="{{ url('/admin/users') }}" class="btn btn-tool btn-sm" title="show">
                                     <i class="fas fa-eye"></i>
                                 </a>
                             </div>

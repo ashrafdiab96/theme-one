@@ -31,7 +31,7 @@
                             <h3 class="card-title m-0">Contacts page content</h3>
                         </div>
                         <div class="col-md-3">
-                            <a class="btn btn-warning" href="{{ url('admin/contacts/edit') }}">Edit</a>
+                            <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/contacts/edit') }}">Edit</a>
                         </div>
                     </div>
 

@@ -31,7 +31,7 @@
                             <h3 class="card-title m-0">Home page content</h3>
                         </div>
                         <div class="col-md-3">
-                            <a class="btn btn-warning" href="{{ url('admin/home/edit') }}">Edit</a>
+                            <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/home/edit') }}">Edit</a>
                         </div>
                     </div>
 

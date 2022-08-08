@@ -1,18 +1,18 @@
 @extends('adminLayouts.app')
 
 @section('admin-title')
-    Admin | Profile | Edit
+    Admin | Services | Edit
 @endsection
 
 @section('admin-content')
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="profile-header">
+            <div class="about-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-md-6">
-                            <h4 class="m-0 text-uppercase">Profile | Edit</h4>
+                            <h4 class="m-0 text-uppercase">Services | Edit</h4>
                         </div>
                         <div class="col-md-6">
 
@@ -26,37 +26,33 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="p-0 m-0">Edit profile form</h5>
+                    <h5 class="p-0 m-0">Edit service</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ url('/admin/profile/update') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('/admin/service/update/'.$service->id) }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>Missions (AR)</label>
-                            <textarea class="form-control ckeditor" name="missions_ar" value="{{ $profile->missions_ar }}" rows="5">{{ $profile->missions_ar }}</textarea>
+                            <label>Name (AR)</label>
+                            <input type="text" class="form-control" name="name_ar" value="{{ $service->name_ar }}">
                         </div>
                         <div class="form-group">
-                            <label>Missions (EN)</label>
-                            <textarea class="form-control ckeditor" name="missions_en" value="{{ $profile->missions_en }}" rows="5">{{ $profile->missions_en }}</textarea>
+                            <label>Name (EN)</label>
+                            <input type="text" class="form-control" name="name_en" value="{{ $service->name_en }}">
                         </div>
                         <div class="form-group">
-                            <label>Vision (AR)</label>
-                            <textarea class="form-control ckeditor" name="vision_ar" value="{{ $profile->vision_ar }}" rows="5">{{ $profile->vision_ar }}</textarea>
+                            <label>Description (AR)</label>
+                            <textarea class="form-control ckeditor" name="desc_ar" value="{{ $service->desc_ar }}" rows="5">{{ $service->desc_ar }}</textarea>
                         </div>
                         <div class="form-group">
-                            <label>Vision (EN)</label>
-                            <textarea class="form-control ckeditor" name="vision_en" value="{{ $profile->vision_en }}" rows="5">{{ $profile->vision_en }}</textarea>
+                            <label>Description (EN)</label>
+                            <textarea class="form-control ckeditor" name="desc_en" value="{{ $service->desc_en }}" rows="5">{{ $service->desc_en }}</textarea>
                         </div>
                         <div class="form-group">
-                            <label>Strength (AR)</label>
-                            <textarea class="form-control ckeditor" name="strength_ar" value="{{ $profile->strength_ar }}" rows="5">{{ $profile->strength_ar }}</textarea>
+                            <label>Image</label>
+                            <input type="file" class="form-control" name="image">
                         </div>
                         <div class="form-group">
-                            <label>Strength (EN)</label>
-                            <textarea class="form-control ckeditor" name="strength_en" value="{{ $profile->strength_en }}" rows="5">{{ $profile->strength_en }}</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>profile background</label>
+                            <label>Background</label>
                             <input type="file" class="form-control" name="background">
                         </div>
                         <div class="form-group text-center">

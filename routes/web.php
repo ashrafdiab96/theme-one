@@ -16,6 +16,8 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Admin\AdminServicesController;
+use App\Http\Controllers\Admin\AdminUsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +91,23 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/contacts/edit', [AdminContactsController::class, 'edit'])->name('admin-contacts-edit');
     Route::post('/admin/contacts/update', [AdminContactsController::class, 'update'])->name('admin-contacts-update');
 
+    // USERS ROUTES
+    Route::get('/admin/users', [AdminUsersController::class, 'index'])->name('admin-users');
+    Route::get('/admin/user/edit/{id}', [AdminUsersController::class, 'edit'])->name('admin-users-edit');
+    Route::post('/admin/user/update/{id}', [AdminUsersController::class, 'update'])->name('admin-users-update');
+    Route::get('/admin/user/new', [AdminUsersController::class, 'new'])->name('admin-users-new');
+    Route::post('/admin/user/save', [AdminUsersController::class, 'save'])->name('admin-users-save');
+    Route::get('/admin/user/editPass/{id}', [AdminUsersController::class, 'editPassword'])->name('admin-users-editPass');
+    Route::post('/admin/user/updatePass/{id}', [AdminUsersController::class, 'updatePassword'])->name('admin-users-updatePass');
+    Route::delete('/admin/user/delete/{id}', [AdminUsersController::class, 'delete'])->name('admin-users-delete');
+
+    // SERVICES ROUTES
+    Route::get('/admin/services', [AdminServicesController::class, 'index'])->name('admin-users');
+    Route::get('/admin/service/edit/{id}', [AdminServicesController::class, 'edit'])->name('admin-users-edit');
+    Route::post('/admin/service/update/{id}', [AdminServicesController::class, 'update'])->name('admin-users-update');
+    Route::get('/admin/service/new', [AdminServicesController::class, 'new'])->name('admin-users-new');
+    Route::post('/admin/service/save', [AdminServicesController::class, 'save'])->name('admin-users-save');
+    Route::delete('/admin/service/delete/{id}', [AdminServicesController::class, 'delete'])->name('admin-users-delete');
 
 });
 

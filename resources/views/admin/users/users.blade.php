@@ -1,18 +1,18 @@
 @extends('adminLayouts.app')
 
 @section('admin-title')
-    Admin | Services | Show
+    Admin | Users | Show
 @endsection
 
 @section('admin-content')
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="services-header">
+            <div class="users-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-md-6">
-                            <h2 class="m-0 text-uppercase">Services</h2>
+                            <h2 class="m-0 text-uppercase">Users</h2>
                         </div>
                         <div class="col-md-6">
 
@@ -28,10 +28,10 @@
                 <div class="card-header">
                     <div class="row align align-items-center">
                         <div class="col-md-9">
-                            <h3 class="card-title p-0 m-0">Services</h3>
+                            <h3 class="card-title p-0 m-0">Users</h3>
                         </div>
                         <div class="col-md-3">
-                            <a class="btn btn-info btn-sm btn-flat" href="{{ url('admin/service/new') }}">
+                            <a class="btn btn-info btn-sm btn-flat" href="{{ url('admin/user/new') }}">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
@@ -40,34 +40,44 @@
                 </div>
 
                 <div class="card-body">
-                    @if(session()->has('services_success'))
+                    @if(session()->has('users_success'))
                         <div class="alert alert-success" role="alert">
-                            {{ session()->get('services_success') }}
+                            {{ session()->get('users_success') }}
                         </div>
                     @endif
-                    @if(session()->has('services_fail'))
+                    @if(session()->has('users_fail'))
                         <div class="alert alert-danger" role="alert">
-                            {{ session()->get('services_fail') }}
+                            {{ session()->get('users_fail') }}
                         </div>
                     @endif
-                    @if(session()->has('services_deleted'))
+                    @if(session()->has('users_updated'))
                         <div class="alert alert-success" role="alert">
-                            {{ session()->get('services_deleted') }}
+                            {{ session()->get('users_updated') }}
                         </div>
                     @endif
-                    @if(session()->has('services_not_deleted'))
+                    @if(session()->has('users_not_updated'))
                         <div class="alert alert-danger" role="alert">
-                            {{ session()->get('services_not_deleted') }}
+                            {{ session()->get('users_not_updated') }}
                         </div>
                     @endif
-                    @if(session()->has('service_updated'))
+                    @if(session()->has('user_deleted'))
                         <div class="alert alert-success" role="alert">
-                            {{ session()->get('service_updated') }}
+                            {{ session()->get('user_deleted') }}
                         </div>
                     @endif
-                    @if(session()->has('service_not_updated'))
+                    @if(session()->has('users_not_deleted'))
                         <div class="alert alert-danger" role="alert">
-                            {{ session()->get('service_not_updated') }}
+                            {{ session()->get('users_not_deleted') }}
+                        </div>
+                    @endif
+                    @if(session()->has('user_pass_upd'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session()->get('user_pass_upd') }}
+                        </div>
+                    @endif
+                    @if(session()->has('users_pass_not_upd'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session()->get('users_pass_not_upd') }}
                         </div>
                     @endif
                     <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
@@ -81,31 +91,29 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Name (AR)</th>
-                                            <th>Name (EN)</th>
-                                            <th>Image</th>
-                                            <th>Background</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
                                             <th>Control Tools</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($services as $service)
+                                        @foreach ($users as $user)
                                             <tr>
-                                                <td>{{ $service->id }}</td>
-                                                <td>{{ $service->name_ar }}</td>
-                                                <td>{{ $service->name_en }}</td>
+                                                <td>{{ $user->id }}</td>
+                                                <td>{{ $user->name }}</td>
+                                                <td>{{ $user->email }}</td>
+                                                <td>{{ $user->phone }}</td>
                                                 <td>
-                                                    <img src="{{ asset('assets/upload/services/'.$service->image) }}" class="admin-service-img" alt="Service image">
-                                                </td>
-                                                <td>
-                                                    <img src="{{ asset('assets/upload/services/'.$service->background) }}" class="admin-service-img" alt="Service background">
-                                                </td>
-                                                <td>
-                                                    <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/service/edit/'.$service->id) }}">
+                                                    <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/user/edit/'.$user->id) }}">
                                                         <i class="fas fa-edit"></i>
                                                         Edit
                                                     </a>
-                                                    <button class="btn btn-danger btn-sm btn-flat" onclick="deleteService({{ $service->id }})">
+                                                    <a class="btn btn-primary btn-sm btn-flat" href="{{ url('admin/user/editPass/'.$user->id) }}">
+                                                        <i class="fas fa-edit"></i>
+                                                        Edit Password
+                                                    </a>
+                                                    <button class="btn btn-danger btn-sm btn-flat" onclick="deleteUser({{ $user->id }})">
                                                         <i class="fas fa-minus-circle"></i>
                                                         Delete
                                                     </button>
@@ -127,9 +135,9 @@
 @section('admin-js')
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function deleteService(id) {
+    function deleteUser(id) {
         Swal.fire({
-            title: 'Are you sure you want to delete this service?',
+            title: 'Are you sure you want to delete this user?',
             text: "You won't be able to revert this!",
             icon: 'warning',
             showCancelButton: true,
@@ -145,7 +153,7 @@
                 });
                 $.ajax({
                     type: 'DELETE',
-                    url: "service/delete/"+id,
+                    url: "user/delete/"+id,
                     data: {},
                     success: (data) => {
                         window.location.reload();
