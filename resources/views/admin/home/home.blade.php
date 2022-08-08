@@ -30,8 +30,11 @@
                         <div class="col-md-9">
                             <h3 class="card-title m-0">Home page content</h3>
                         </div>
-                        <div class="col-md-3">
-                            <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/home/edit') }}">Edit</a>
+                        <div class="col-md-3 text-right">
+                            <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/home/edit') }}">
+                                <i class="far fa-edit"></i>
+                                Edit
+                            </a>
                         </div>
                     </div>
 

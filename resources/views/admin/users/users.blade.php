@@ -30,7 +30,7 @@
                         <div class="col-md-9">
                             <h3 class="card-title p-0 m-0">Users</h3>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 text-right">
                             <a class="btn btn-info btn-sm btn-flat" href="{{ url('admin/user/new') }}">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
