@@ -27,13 +27,21 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row align align-items-center">
-                        <div class="col-md-9">
+                        <div class="col-md-6">
                             <h3 class="card-title p-0 m-0">Services</h3>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6 text-right">
                             <a class="btn btn-info btn-sm btn-flat" href="{{ url('admin/service/new') }}">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
+                            </a>
+                            <button type="button" class="btn btn-secondary btn-sm btn-flat" data-toggle="modal" data-target="#showBcModal">
+                                <i class="far fa-eye"></i>
+                                Show background
+                            </button>
+                            <a class="btn btn-primary btn-sm btn-flat" href="{{ url('admin/service/editBack') }}">
+                                <i class="far fa-edit"></i>
+                                Edit background
                             </a>
                         </div>
                     </div>
@@ -70,6 +78,16 @@
                             {{ session()->get('service_not_updated') }}
                         </div>
                     @endif
+                    @if(session()->has('bc_success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session()->get('bc_success') }}
+                        </div>
+                    @endif
+                    @if(session()->has('bc_fail'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session()->get('bc_fail') }}
+                        </div>
+                    @endif
                     <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
                         <div class="row">
                             <div class="col-sm-12 col-md-6"></div>
@@ -101,14 +119,27 @@
                                                     <img src="{{ asset('assets/upload/services/'.$service->background) }}" class="admin-service-img" alt="Service background">
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/service/edit/'.$service->id) }}">
-                                                        <i class="fas fa-edit"></i>
-                                                        Edit
-                                                    </a>
-                                                    <button class="btn btn-danger btn-sm btn-flat" onclick="deleteService({{ $service->id }})">
-                                                        <i class="fas fa-minus-circle"></i>
-                                                        Delete
-                                                    </button>
+                                                    <div class="row">
+                                                        <div class="col-md-6 px-1">
+                                                            <a class="btn btn-warning btn-sm btn-flat w-100" href="{{ url('admin/service/edit/'.$service->id) }}">
+                                                                <i class="fas fa-edit"></i>
+                                                                Edit
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-6 px-1">
+                                                            <button class="btn btn-danger btn-sm btn-flat w-100" onclick="deleteService({{ $service->id }})">
+                                                                <i class="fas fa-minus-circle"></i>
+                                                                Delete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <div class="col-md-12 px-1">
+                                                            <a class="btn btn-dark btn-sm btn-flat w-100" href="{{ url('/admin/service/gallery/'.$service->id) }}">
+                                                                Servcie Gallery
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -117,6 +148,24 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="showBcModal" tabindex="-1" role="dialog" aria-labelledby="showBcModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('assets/upload/services/'.$home->services_bc) }}" class="img-fluid" alt="Services page background">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

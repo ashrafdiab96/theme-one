@@ -108,7 +108,7 @@
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="{{ url('admin/services') }}" class="nav-link {{ request()->is('admin/services') || request()->is('admin/services/*') ? 'active-nav-link' : '' }}">
+                        <a href="{{ url('admin/services') }}" class="nav-link {{ request()->is('admin/services') || request()->is('admin/services/*')  || request()->is('admin/service/*') ? 'active-nav-link' : '' }}">
                             <i class="fab fa-servicestack"></i>
                             <p>Services</p>
                         </a>
@@ -136,7 +136,7 @@
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="{{ url('admin/users') }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active-nav-link' : '' }}">
+                        <a href="{{ url('admin/users') }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') || request()->is('admin/user/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-user"></i>
                             <p>Users</p>
                         </a>

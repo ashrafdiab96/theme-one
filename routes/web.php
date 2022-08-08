@@ -103,11 +103,19 @@ Route::middleware('auth')->group(function() {
 
     // SERVICES ROUTES
     Route::get('/admin/services', [AdminServicesController::class, 'index'])->name('admin-users');
-    Route::get('/admin/service/edit/{id}', [AdminServicesController::class, 'edit'])->name('admin-users-edit');
-    Route::post('/admin/service/update/{id}', [AdminServicesController::class, 'update'])->name('admin-users-update');
     Route::get('/admin/service/new', [AdminServicesController::class, 'new'])->name('admin-users-new');
     Route::post('/admin/service/save', [AdminServicesController::class, 'save'])->name('admin-users-save');
+    Route::get('/admin/service/editBack', [AdminServicesController::class, 'editBackground'])->name('admin-users-editBack');
+    Route::post('/admin/service/updateBack', [AdminServicesController::class, 'updateBackground'])->name('admin-users-updateBack');
+    Route::get('/admin/service/edit/{id}', [AdminServicesController::class, 'edit'])->name('admin-users-edit');
+    Route::post('/admin/service/update/{id}', [AdminServicesController::class, 'update'])->name('admin-users-update');
     Route::delete('/admin/service/delete/{id}', [AdminServicesController::class, 'delete'])->name('admin-users-delete');
+    Route::get('/admin/service/gallery/{id}', [AdminServicesController::class, 'images'])->name('admin-users-images');
+    Route::get('/admin/service/addImg/{id}', [AdminServicesController::class, 'addImage'])->name('admin-users-addImg');
+    Route::post('/admin/service/saveImg/{id}', [AdminServicesController::class, 'saveImage'])->name('admin-users-update');
+    Route::get('/admin/service/editImg/{id}', [AdminServicesController::class, 'editImage'])->name('admin-users-addImg');
+    Route::post('/admin/service/updateImg/{id}', [AdminServicesController::class, 'updateImage'])->name('admin-users-updateImg');
+    Route::delete('/admin/service/deleteImg/{id}', [AdminServicesController::class, 'deleteImage'])->name('admin-users-deleteImg');
 
 });
 

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Home;
 use App\Models\Services;
+use App\Models\ServicesImages;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -17,7 +19,8 @@ class AdminServicesController extends Controller
     public function index ()
     {
         $services = Services::all();
-        return view('admin.services.services', compact('services'));
+        $home = Home::first();
+        return view('admin.services.services', compact(['services', 'home']));
     }
 
     /**
@@ -55,6 +58,19 @@ class AdminServicesController extends Controller
                 $service->background = time().'_'.$request->file('background')->getClientOriginalName();
             }
             $service->save();
+
+            $images = $request->file('images');
+            if($images) {
+                foreach($images as $img) {
+                    $image_name = time().'_'.$img->getClientOriginalName();
+                    $filePath = $img->move('assets/upload/services_images', $image_name);
+                    $service_img = new ServicesImages();
+                    $service_img->service_id = $service->id;
+                    $service_img->image = time().'_'.$img->getClientOriginalName();
+                    $service_img->save();
+                }
+            }
+
             return redirect()->to('/admin/services')->with('services_success', 'Service added successfully');
 
         } catch(Exception $e) {
@@ -134,10 +150,169 @@ class AdminServicesController extends Controller
             if(isset($service_iag)) {
                 unlink($service_iag);
             }
+
+            $service_imgs = ServicesImages::where('service_id', $id)->get();
+            if($service_imgs) {
+                foreach($service_imgs as $img) {
+                    $serv_imgs = public_path('assets/upload/services_images/'.$img->image);
+                    unlink($serv_imgs);
+                    $img->delete();
+                }
+            }
+
             $service->delete();
             return redirect()->to('/admin/services')->with('services_deleted', 'Service has been deleted successfully');
         } catch(Exception $e) {
             return redirect()->to('/admin/services')->with('services_not_deleted', 'An unexpected error occured');
+        }
+    }
+
+    /**
+     * editBackground function
+     * edit service page background
+     * @param integer $id
+     * @return view
+     */
+    public function editBackground ()
+    {
+        return view('admin.services.edit-background');
+    }
+
+    /**
+     * updateBackground function
+     * update service page background
+     * @param Request $request
+     * @param integer $id
+     * @return redirect
+     */
+    public function updateBackground (Request $request)
+    {
+        try {
+            $home = Home::first();
+            if($request->hasFile('background')) {
+                $service_bc = public_path('assets/upload/services/'.$home->services_bc);
+                if(isset($service_bc)) {
+                    unlink($service_bc);
+                }
+                $image_name = time().'_'.$request->file('background')->getClientOriginalName();
+                $filePath = $request->file('background')->move('assets/upload/services', $image_name);
+                $home->services_bc = time().'_'.$request->file('background')->getClientOriginalName();
+            }
+            $home->save();
+            return redirect()->to('/admin/services')->with('bc_success', 'Services page background has been updated successfully');
+
+        } catch(Exception $e) {
+            return redirect()->to('/admin/services')->with('bc_fail', 'An unexpected error occured');
+        }
+    }
+
+    /**
+     * images function
+     * show service images page
+     * @param integer $id
+     * @return view
+     */
+    public function images ($id)
+    {
+        $images = ServicesImages::where('service_id', $id)->get();
+        return view('admin.services.images', compact('images'));
+    }
+
+    /**
+     * addImage function
+     * add new service image
+     * @param integer $id
+     * @return view
+     */
+    public function addImage ($id)
+    {
+        return view('admin.services.add-img', compact('id'));
+    }
+
+    /**
+     * saveImage function
+     * save new service image
+     * @param Request $request
+     * @param integer $id
+     * @return redirect
+     */
+    public function saveImage (Request $request, $id)
+    {
+        try {
+            if($request->hasFile('image')) {
+                $img = new ServicesImages();
+                $img->service_id = $id;
+                $image_name = time().'_'.$request->file('image')->getClientOriginalName();
+                $filePath = $request->file('image')->move('assets/upload/services_images', $image_name);
+                $img->image = time().'_'.$request->file('image')->getClientOriginalName();
+                $img->save();
+                return redirect()->to('/admin/service/gallery/'.$id)->with('img_success', 'Image has been added successfully');
+
+            }
+        } catch(Exception $e) {
+            return redirect()->to('/admin/service/gallery/'.$id)->with('img_fail', 'An unexpected error occured');
+        }
+    }
+
+    /**
+     * editImage function
+     * edit service image
+     * @param integer $id
+     * @return view
+     */
+    public function editImage ($id)
+    {
+        $img = ServicesImages::findOrFail($id);
+        return view('admin.services.edit-img', compact('img'));
+    }
+
+    /**
+     * updateImage function
+     * update service image
+     * @param Request $request
+     * @param integer $id
+     * @return redirect
+     */
+    public function updateImage (Request $request, $id)
+    {
+        try {
+            if($request->hasFile('image')) {
+                $img = ServicesImages::findOrFail($id);
+                $old_img = public_path('assets/upload/services_images/'.$img->image);
+                if($old_img) {
+                    unlink($old_img);
+                }
+                $image_name = time().'_'.$request->file('image')->getClientOriginalName();
+                $filePath = $request->file('image')->move('assets/upload/services_images', $image_name);
+                $img->image = time().'_'.$request->file('image')->getClientOriginalName();
+                $img->save();
+                return redirect()->to('/admin/service/gallery/'.$img->service_id)->with('img_updated', 'Image has been updated successfully');
+
+            }
+        } catch(Exception $e) {
+            return redirect()->to('/admin/service/gallery/'.$$img->service_id)->with('img_not_updated', 'An unexpected error occured');
+        }
+    }
+
+    /**
+     * deleteImage function
+     * delete service image
+     * @param integer $id
+     * @return redirect
+     */
+    public function deleteImage ($id)
+    {
+        try {
+            $img = ServicesImages::findOrFail($id);
+            $service_img = public_path('assets/upload/services_images/').$img->image;
+            if(isset($service_img)) {
+                unlink($service_img);
+            }
+
+            $img->delete();
+            return redirect()->to('/admin/service/gallery/'.$img->service_id)->with('img_deleted', 'Image has been deleted successfully');
+        } catch(Exception $e) {
+            return redirect()->to('/admin/servicegallery/'.$img->service_id)->with('img_not_deleted', 'An unexpected error occured');
         }
     }
 

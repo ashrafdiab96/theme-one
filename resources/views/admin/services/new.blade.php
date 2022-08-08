@@ -52,6 +52,10 @@
                             <input type="file" class="form-control" name="image">
                         </div>
                         <div class="form-group">
+                            <label>Images Gallery</label>
+                            <input type="file" class="form-control" name="images[]" multiple>
+                        </div>
+                        <div class="form-group">
                             <label>Background</label>
                             <input type="file" class="form-control" name="background">
                         </div>
