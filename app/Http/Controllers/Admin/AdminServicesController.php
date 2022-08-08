@@ -125,8 +125,16 @@ class AdminServicesController extends Controller
     public function delete ($id)
     {
         try {
-            $user = Services::findOrFail($id);
-            $user->delete();
+            $service = Services::findOrFail($id);
+            $service_bc = public_path('assets/upload/services/').$service->background;
+            $service_iag = public_path('assets/upload/services/').$service->image;
+            if(isset($service_bc)) {
+                unlink($service_bc);
+            }
+            if(isset($service_iag)) {
+                unlink($service_iag);
+            }
+            $service->delete();
             return redirect()->to('/admin/services')->with('services_deleted', 'Service has been deleted successfully');
         } catch(Exception $e) {
             return redirect()->to('/admin/services')->with('services_not_deleted', 'An unexpected error occured');
