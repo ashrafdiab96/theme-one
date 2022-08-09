@@ -86,7 +86,7 @@ class AdminSliderController extends Controller
             $slider->desc_en = $request->desc_en;
             if($request->hasFile('image')) {
                 $old_img = public_path('assets/upload/slider/'.$slider->image);
-                if(isset($old_img)) {
+                if(isset($slider->image)) {
                     unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();

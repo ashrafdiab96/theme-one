@@ -48,8 +48,8 @@ class AdminProfileController extends Controller
             $profile->strength_ar = $request->strength_ar;
             $profile->strength_en = $request->strength_en;
             if($request->hasFile('background')) {
-                $old_img = public_path('assets/upload/profile/').$profile->background;
-                if(isset($old_img)) {
+                $old_img = public_path('assets/upload/profile/'.$profile->background);
+                if(isset($profile->background)) {
                     unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
