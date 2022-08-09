@@ -60,7 +60,7 @@
     <!-- side navigation bar -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <span class="brand-link text-center app-logo">
-            <h4 class="brand-text font-weight-light text-uppercase m-0">F&D Engineering</h4>
+            <h4 class="brand-text font-weight-bold text-uppercase m-0">F&D Engineering</h4>
         </span>
 
         <!-- user information -> show for all -->
@@ -90,6 +90,13 @@
                         <a href="{{ url('admin/home') }}" class="nav-link {{ request()->is('admin/home') || request()->is('admin/home/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-home"></i>
                             <p>Home</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
+                        <a href="{{ url('admin/slider') }}" class="nav-link {{ request()->is('admin/slider') || request()->is('admin/slider/*') ? 'active-nav-link' : '' }}">
+                            <i class="fas fa-video"></i>
+                            <p>Slider</p>
                         </a>
                     </li>
 

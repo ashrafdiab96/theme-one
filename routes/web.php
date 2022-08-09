@@ -17,6 +17,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminServicesController;
+use App\Http\Controllers\Admin\AdminSliderController;
 use App\Http\Controllers\Admin\AdminUsersController;
 
 /*
@@ -75,6 +76,14 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin-home');
     Route::get('/admin/home/edit', [AdminHomeController::class, 'edit'])->name('admin-home-edit');
     Route::post('/admin/home/update', [AdminHomeController::class, 'update'])->name('admin-home-update');
+
+    // SLIDER ROUTES
+    Route::get('/admin/slider', [AdminSliderController::class, 'index'])->name('admin-users');
+    Route::get('/admin/slider/new', [AdminSliderController::class, 'new'])->name('admin-users-new');
+    Route::post('/admin/slider/save', [AdminSliderController::class, 'save'])->name('admin-users-save');
+    Route::get('/admin/slider/edit/{id}', [AdminSliderController::class, 'edit'])->name('admin-users-edit');
+    Route::post('/admin/slider/update/{id}', [AdminSliderController::class, 'update'])->name('admin-users-update');
+    Route::delete('/admin/slider/delete/{id}', [AdminSliderController::class, 'delete'])->name('admin-users-delete');
 
     // ABOUT ROUTES
     Route::get('/admin/about', [AdminAboutController::class, 'index'])->name('admin-about');
