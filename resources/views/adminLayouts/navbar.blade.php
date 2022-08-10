@@ -35,7 +35,7 @@
                         <ul class="dropdown-menu main-prof-dropdown">
                             <li class="user-header">
                                 <img src="{{ asset('assets/images/employee.png') }}" class="img-circle profile-pic" alt="User Image">
-                                <p class="text-white">
+                                <p class="text-dark">
                                     <span>{{ Auth::user()->name }}</span>
                                 </p>
                             </li>
@@ -122,7 +122,7 @@
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link">
+                        <a href="{{ url('admin/projects') }}" class="nav-link {{ request()->is('admin/projects') || request()->is('admin/projects/*')  || request()->is('admin/project/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-project-diagram"></i>
                             <p>Projects</p>
                         </a>

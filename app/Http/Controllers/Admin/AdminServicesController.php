@@ -304,7 +304,7 @@ class AdminServicesController extends Controller
     {
         try {
             $img = ServicesImages::findOrFail($id);
-            $service_img = public_path('assets/upload/services_images/').$img->image;
+            $service_img = public_path('assets/upload/services_images/'.$img->image);
             if(isset($img->image)) {
                 unlink($service_img);
             }

@@ -16,6 +16,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Admin\AdminProjectsController;
 use App\Http\Controllers\Admin\AdminServicesController;
 use App\Http\Controllers\Admin\AdminSliderController;
 use App\Http\Controllers\Admin\AdminUsersController;
@@ -111,20 +112,37 @@ Route::middleware('auth')->group(function() {
     Route::delete('/admin/user/delete/{id}', [AdminUsersController::class, 'delete'])->name('admin-users-delete');
 
     // SERVICES ROUTES
-    Route::get('/admin/services', [AdminServicesController::class, 'index'])->name('admin-users');
-    Route::get('/admin/service/new', [AdminServicesController::class, 'new'])->name('admin-users-new');
-    Route::post('/admin/service/save', [AdminServicesController::class, 'save'])->name('admin-users-save');
-    Route::get('/admin/service/editBack', [AdminServicesController::class, 'editBackground'])->name('admin-users-editBack');
-    Route::post('/admin/service/updateBack', [AdminServicesController::class, 'updateBackground'])->name('admin-users-updateBack');
-    Route::get('/admin/service/edit/{id}', [AdminServicesController::class, 'edit'])->name('admin-users-edit');
-    Route::post('/admin/service/update/{id}', [AdminServicesController::class, 'update'])->name('admin-users-update');
-    Route::delete('/admin/service/delete/{id}', [AdminServicesController::class, 'delete'])->name('admin-users-delete');
-    Route::get('/admin/service/gallery/{id}', [AdminServicesController::class, 'images'])->name('admin-users-images');
-    Route::get('/admin/service/addImg/{id}', [AdminServicesController::class, 'addImage'])->name('admin-users-addImg');
-    Route::post('/admin/service/saveImg/{id}', [AdminServicesController::class, 'saveImage'])->name('admin-users-update');
-    Route::get('/admin/service/editImg/{id}', [AdminServicesController::class, 'editImage'])->name('admin-users-addImg');
-    Route::post('/admin/service/updateImg/{id}', [AdminServicesController::class, 'updateImage'])->name('admin-users-updateImg');
-    Route::delete('/admin/service/deleteImg/{id}', [AdminServicesController::class, 'deleteImage'])->name('admin-users-deleteImg');
+    Route::get('/admin/services', [AdminServicesController::class, 'index'])->name('admin-services');
+    Route::get('/admin/service/new', [AdminServicesController::class, 'new'])->name('admin-service-new');
+    Route::post('/admin/service/save', [AdminServicesController::class, 'save'])->name('admin-service-save');
+    Route::get('/admin/service/editBack', [AdminServicesController::class, 'editBackground'])->name('admin-service-editBack');
+    Route::post('/admin/service/updateBack', [AdminServicesController::class, 'updateBackground'])->name('admin-service-updateBack');
+    Route::get('/admin/service/edit/{id}', [AdminServicesController::class, 'edit'])->name('admin-service-edit');
+    Route::post('/admin/service/update/{id}', [AdminServicesController::class, 'update'])->name('admin-service-update');
+    Route::delete('/admin/service/delete/{id}', [AdminServicesController::class, 'delete'])->name('admin-service-delete');
+    Route::get('/admin/service/gallery/{id}', [AdminServicesController::class, 'images'])->name('admin-service-images');
+    Route::get('/admin/service/addImg/{id}', [AdminServicesController::class, 'addImage'])->name('admin-service-addImg');
+    Route::post('/admin/service/saveImg/{id}', [AdminServicesController::class, 'saveImage'])->name('admin-service-update');
+    Route::get('/admin/service/editImg/{id}', [AdminServicesController::class, 'editImage'])->name('admin-service-addImg');
+    Route::post('/admin/service/updateImg/{id}', [AdminServicesController::class, 'updateImage'])->name('admin-service-updateImg');
+    Route::delete('/admin/service/deleteImg/{id}', [AdminServicesController::class, 'deleteImage'])->name('admin-service-deleteImg');
+
+    // SERVICES ROUTES
+    Route::get('/admin/projects', [AdminProjectsController::class, 'index'])->name('admin-projects');
+    Route::get('/admin/project/new', [AdminProjectsController::class, 'new'])->name('admin-project-new');
+    Route::post('/admin/project/save', [AdminProjectsController::class, 'save'])->name('admin-project-save');
+    Route::get('/admin/project/editBack', [AdminProjectsController::class, 'editBackground'])->name('admin-project-editBack');
+    Route::post('/admin/project/updateBack', [AdminProjectsController::class, 'updateBackground'])->name('admin-project-updateBack');
+    Route::get('/admin/project/edit/{id}', [AdminProjectsController::class, 'edit'])->name('admin-project-edit');
+    Route::post('/admin/project/update/{id}', [AdminProjectsController::class, 'update'])->name('admin-project-update');
+    Route::delete('/admin/project/delete/{id}', [AdminProjectsController::class, 'delete'])->name('admin-project-delete');
+    Route::get('/admin/project/gallery/{id}', [AdminProjectsController::class, 'images'])->name('admin-project-images');
+    Route::get('/admin/project/addImg/{id}', [AdminProjectsController::class, 'addImage'])->name('admin-project-addImg');
+    Route::post('/admin/project/saveImg/{id}', [AdminProjectsController::class, 'saveImage'])->name('admin-project-update');
+    Route::get('/admin/project/editImg/{id}', [AdminProjectsController::class, 'editImage'])->name('admin-project-addImg');
+    Route::post('/admin/project/updateImg/{id}', [AdminProjectsController::class, 'updateImage'])->name('admin-project-updateImg');
+    Route::delete('/admin/project/deleteImg/{id}', [AdminProjectsController::class, 'deleteImage'])->name('admin-project-deleteImg');
+
 
 });
 
