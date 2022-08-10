@@ -129,7 +129,7 @@
                     </li>
 
                     <li class="nav-item navbar-link">
-                        <a href="#" class="nav-link">
+                        <a href="{{ url('admin/blogs') }}" class="nav-link {{ request()->is('admin/blogs') || request()->is('admin/blogs/*')  || request()->is('admin/blog/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-blog"></i>
                             <p>Blogs</p>
                         </a>

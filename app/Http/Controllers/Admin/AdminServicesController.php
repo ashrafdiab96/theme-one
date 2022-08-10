@@ -82,8 +82,8 @@ class AdminServicesController extends Controller
      * edit function
      * edit seervice page
      * @param Request $request
-     * @param [type] $id
-     * @return void
+     * @param integer $id
+     * @return view
      */
     public function edit (Request $request, $id)
     {

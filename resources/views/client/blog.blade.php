@@ -38,7 +38,7 @@
                         <img src="{{ asset('assets/upload/blogs/'.$blog->image) }}" alt="Servie Iage">
                     </div>
                     <div class="blog-page-desc py-5">
-                        <p class="text-capitalize text-muted">{{ __('app.project_desc') }}</p>
+                        <p class="text-capitalize text-muted">{{ __('app.blog_content') }}</p>
                         <p>
                             @if (app()->getLocale() == 'en')
                                 {!! $blog->content_en !!}

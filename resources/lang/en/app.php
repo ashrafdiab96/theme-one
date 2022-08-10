@@ -61,7 +61,7 @@ return [
     'field_req' => 'This field is required',
     'mes_sent_succ' => 'Your message has been sent successfully',
     'pls_wait' => 'Please wait',
-    '' => '',
+    'blog_content' => 'blog content',
     '' => '',
     '' => '',
     '' => '',

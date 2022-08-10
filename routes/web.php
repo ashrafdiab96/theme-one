@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\AdminAboutController;
+use App\Http\Controllers\Admin\AdminBlogsController;
 use App\Http\Controllers\Admin\AdminContactsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
@@ -127,7 +128,7 @@ Route::middleware('auth')->group(function() {
     Route::post('/admin/service/updateImg/{id}', [AdminServicesController::class, 'updateImage'])->name('admin-service-updateImg');
     Route::delete('/admin/service/deleteImg/{id}', [AdminServicesController::class, 'deleteImage'])->name('admin-service-deleteImg');
 
-    // SERVICES ROUTES
+    // PROJECTS ROUTES
     Route::get('/admin/projects', [AdminProjectsController::class, 'index'])->name('admin-projects');
     Route::get('/admin/project/new', [AdminProjectsController::class, 'new'])->name('admin-project-new');
     Route::post('/admin/project/save', [AdminProjectsController::class, 'save'])->name('admin-project-save');
@@ -142,6 +143,22 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/project/editImg/{id}', [AdminProjectsController::class, 'editImage'])->name('admin-project-addImg');
     Route::post('/admin/project/updateImg/{id}', [AdminProjectsController::class, 'updateImage'])->name('admin-project-updateImg');
     Route::delete('/admin/project/deleteImg/{id}', [AdminProjectsController::class, 'deleteImage'])->name('admin-project-deleteImg');
+
+    // BLOGS ROUTES
+    Route::get('/admin/blogs', [AdminBlogsController::class, 'index'])->name('admin-blogs');
+    Route::get('/admin/blog/new', [AdminBlogsController::class, 'new'])->name('admin-blog-new');
+    Route::post('/admin/blog/save', [AdminBlogsController::class, 'save'])->name('admin-blog-save');
+    Route::get('/admin/blog/editBack', [AdminBlogsController::class, 'editBackground'])->name('admin-blog-editBack');
+    Route::post('/admin/blog/updateBack', [AdminBlogsController::class, 'updateBackground'])->name('admin-blog-updateBack');
+    Route::get('/admin/blog/edit/{id}', [AdminBlogsController::class, 'edit'])->name('admin-blog-edit');
+    Route::post('/admin/blog/update/{id}', [AdminBlogsController::class, 'update'])->name('admin-blog-update');
+    Route::delete('/admin/blog/delete/{id}', [AdminBlogsController::class, 'delete'])->name('admin-blog-delete');
+    Route::get('/admin/blog/gallery/{id}', [AdminBlogsController::class, 'images'])->name('admin-blog-images');
+    Route::get('/admin/blog/addImg/{id}', [AdminBlogsController::class, 'addImage'])->name('admin-blog-addImg');
+    Route::post('/admin/blog/saveImg/{id}', [AdminBlogsController::class, 'saveImage'])->name('admin-blog-update');
+    Route::get('/admin/blog/editImg/{id}', [AdminBlogsController::class, 'editImage'])->name('admin-blog-addImg');
+    Route::post('/admin/blog/updateImg/{id}', [AdminBlogsController::class, 'updateImage'])->name('admin-blog-updateImg');
+    Route::delete('/admin/blog/deleteImg/{id}', [AdminBlogsController::class, 'deleteImage'])->name('admin-blog-deleteImg');
 
 
 });
