@@ -41,8 +41,10 @@
                                 <label for="password" class="col-md-3 col-form-label text-md-end">{{ __('Password') }}</label>
 
                                 <div class="col-md-7">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
+                                    <input id="password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    <a id="showPassword">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -50,6 +52,14 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            {{-- <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-7">
+                                    <input type="checkbox" id="showPassword">
+                                    <label>Show Password</label>
+                                </div>
+                            </div> --}}
 
                             {{-- <div class="row mb-3">
                                 <div class="col-md-6 offset-md-4">
@@ -71,11 +81,11 @@
 
                                     <br>
 
-                                    @if (Route::has('password.request'))
+                                    {{-- @if (Route::has('password.request'))
                                         <a class="btn btn-link p-0" href="{{ route('password.request') }}">
                                             Forgot Your Password?
                                         </a>
-                                    @endif
+                                    @endif --}}
                                 </div>
                             </div>
                         </form>
@@ -85,4 +95,13 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('admin-js')
+    <script>
+        let passInp = document.getElementById('password');
+        $('#showPassword').on('click', () => {
+            passInp.type = passInp.type == 'password' ? 'text' : 'password';
+        });
+    </script>
 @endsection

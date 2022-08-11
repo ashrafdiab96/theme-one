@@ -13,7 +13,9 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "mariuzzo/laravel-js-localization": "^1.9",
-        "pulkitjalan/geoip": "^5.1"
+        "pulkitjalan/geoip": "^5.1",
+        "sarfraznawaz2005/visitlog": "^1.3",
+        "yousefpackage/visits": "dev-main"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '401e81c204d0093daced78a996fa36db8398f85a',
+        'reference' => '9a180559801d7430adce5047d8f9f5e29965a422',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -409,7 +409,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '401e81c204d0093daced78a996fa36db8398f85a',
+            'reference' => '9a180559801d7430adce5047d8f9f5e29965a422',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -853,6 +853,15 @@
             'replaced' => array(
                 0 => '4.2.3',
             ),
+        ),
+        'sarfraznawaz2005/visitlog' => array(
+            'pretty_version' => '1.3.4',
+            'version' => '1.3.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sarfraznawaz2005/visitlog',
+            'aliases' => array(),
+            'reference' => 'e4289985fda955a427da347e47bd0ed77704d5a6',
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '1.0.1',
@@ -1314,6 +1323,17 @@
             'install_path' => __DIR__ . '/../webmozart/assert',
             'aliases' => array(),
             'reference' => '11cb2199493b2f8a3b53e7f19068fc6aac760991',
+            'dev_requirement' => false,
+        ),
+        'yousefpackage/visits' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../yousefpackage/visits',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '788c79549136a44b00802cd576fe7de466661c8c',
             'dev_requirement' => false,
         ),
     ),

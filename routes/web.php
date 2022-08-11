@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\AdminProjectsController;
 use App\Http\Controllers\Admin\AdminServicesController;
 use App\Http\Controllers\Admin\AdminSliderController;
 use App\Http\Controllers\Admin\AdminUsersController;
+use App\Http\Controllers\Admin\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -160,6 +161,10 @@ Route::middleware('auth')->group(function() {
     Route::post('/admin/blog/updateImg/{id}', [AdminBlogsController::class, 'updateImage'])->name('admin-blog-updateImg');
     Route::delete('/admin/blog/deleteImg/{id}', [AdminBlogsController::class, 'deleteImage'])->name('admin-blog-deleteImg');
 
+    // PROFILE ROUTES
+    Route::get('/admin/user/profile', [ProfileController::class, 'index'])->name('admin-profile');
+    Route::post('/admin/user/edit-profile', [ProfileController::class, 'update'])->name('admin-profile-update');
+    Route::post('/admin/user/edit-profile-password', [ProfileController::class, 'updatePassword'])->name('admin-profile-update-pass');
 
 });
 

@@ -20,7 +20,7 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light horizontal-navbar">
         <ul class="navbar-nav lan-ul">
             <li class="nav-item" style="cursor: pointer;">
-                <a class="nav-link text-dark"><i class="fas fa-bars mt-1"></i></a>
+                <a class="nav-link text-dark" id="toggleSidebar"><i class="fas fa-bars mt-1"></i></a>
             </li>
         </ul>
 
@@ -39,13 +39,13 @@
                                     <span>{{ Auth::user()->name }}</span>
                                 </p>
                             </li>
-                            <li class="user-footer main-prf-btns">
-                                <div class="pull-left prof-btn">
-                                    <a href="" data-toggle="modal" class="btn btn-default btn-flat" id="admin_profile">
+                            <li class="user-footer main-prf-btns nav-admin-data">
+                                <div class="pull-left prof-btn mx-2">
+                                    <a href="{ url('admin/user/profile') }}" data-toggle="modal" class="btn btn-default btn-flat" id="admin_profile">
                                         Profile
                                     </a>
                                 </div>
-                                <div class="pull-right prof-btn">
+                                <div class="pull-right prof-btn mx-2">
                                     <a href="{{ url('/admin/logout') }}" class="btn btn-default btn-flat">
                                         Logout
                                     </a>
@@ -64,7 +64,7 @@
         </span>
 
         <!-- user information -> show for all -->
-        <a href="#" style="text-decoration: none;">
+        <a href="{{ url('admin/user/profile') }}" style="text-decoration: none;">
             <div class="user-panel mt-3 pb-3 mb-3 d-flex user-panel-custom">
                 <div class="image">
                     <img src="{{ asset('assets/images/employee.png') }}" class="img-circle elevation-2" alt="User Image" style="width: 3.1rem; height: 100%;">

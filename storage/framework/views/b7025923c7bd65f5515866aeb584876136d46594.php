@@ -54,7 +54,7 @@ unset($__errorArgs, $__bag); ?>
                                 <label for="password" class="col-md-3 col-form-label text-md-end"><?php echo e(__('Password')); ?></label>
 
                                 <div class="col-md-7">
-                                    <input id="password" type="password" class="form-control <?php $__errorArgs = ['password'];
+                                    <input id="password" id="password" type="password" class="form-control <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -62,7 +62,9 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="password" required autocomplete="current-password">
-
+                                    <a id="showPassword">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
                                     <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -80,6 +82,8 @@ unset($__errorArgs, $__bag); ?>
 
                             
 
+                            
+
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-3">
                                     <button type="submit" class="btn btn-success btn-sm btn-flat">
@@ -88,11 +92,7 @@ unset($__errorArgs, $__bag); ?>
 
                                     <br>
 
-                                    <?php if(Route::has('password.request')): ?>
-                                        <a class="btn btn-link p-0" href="<?php echo e(route('password.request')); ?>">
-                                            Forgot Your Password?
-                                        </a>
-                                    <?php endif; ?>
+                                    
                                 </div>
                             </div>
                         </form>
@@ -102,6 +102,15 @@ unset($__errorArgs, $__bag); ?>
         </div>
     </div>
 </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('admin-js'); ?>
+    <script>
+        let passInp = document.getElementById('password');
+        $('#showPassword').on('click', () => {
+            passInp.type = passInp.type == 'password' ? 'text' : 'password';
+        });
+    </script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('adminLayouts.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\F&D_Eng\resources\views/auth/login.blade.php ENDPATH**/ ?>

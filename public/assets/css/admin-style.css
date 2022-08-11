@@ -1,3 +1,17 @@
+/* Start navbar */
+.nav-admin-data {
+    display: flex;
+    flex-direction: revert;
+    justify-content: center;
+    align-items: center;
+    background: #fff !important;
+}
+
+.nav-admin-data .prof-btn {
+    background-color: #f1f1f1;
+}
+/* End navbar */
+
 /* Start login page */
 .login-page {
     background: #343a40 !important;
@@ -28,6 +42,28 @@
     border-left: none;
     box-shadow: none;
     border-radius: 0;
+}
+
+#password {
+    position: relative;
+}
+
+#showPassword {
+    position: absolute;
+    right: 25px;
+    top: 7px;
+    color: #000;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }
 /* End login page */
 

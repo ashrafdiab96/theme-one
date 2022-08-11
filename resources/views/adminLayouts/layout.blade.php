@@ -49,6 +49,7 @@
     <script src="{{ asset('assets/AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <script src="{{ asset('assets/AdminLTE/dist/js/adminlte.min.js') }}"></script>
     <script src="{{ asset('assets/AdminLTE/dist/js/pages/dashboard.js') }}"></script>
+    <script src="{{ asset('assets/js/admin-main.js') }}"></script>
 
     @yield('admin-js')
 

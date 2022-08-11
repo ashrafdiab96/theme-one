@@ -77,4 +77,15 @@
       'GeoIP' => 'PulkitJalan\\GeoIP\\Facades\\GeoIP',
     ),
   ),
+  'sarfraznawaz2005/visitlog' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Sarfraznawaz2005\\VisitLog\\VisitLogServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'VisitLog' => 'Sarfraznawaz2005\\VisitLog\\Facades\\VisitLog',
+    ),
+  ),
 );

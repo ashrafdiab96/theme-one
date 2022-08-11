@@ -48,6 +48,10 @@ class ComposerStaticInit049601520a4c5f8740d66bb5db26e71e
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'Y' => 
+        array (
+            'Yousefpackage\\Visits\\' => 21,
+        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -86,6 +90,7 @@ class ComposerStaticInit049601520a4c5f8740d66bb5db26e71e
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Sarfraznawaz2005\\VisitLog\\' => 26,
         ),
         'R' => 
         array (
@@ -196,6 +201,10 @@ class ComposerStaticInit049601520a4c5f8740d66bb5db26e71e
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Yousefpackage\\Visits\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yousefpackage/visits/src',
         ),
         'Whoops\\' => 
         array (
@@ -316,6 +325,10 @@ class ComposerStaticInit049601520a4c5f8740d66bb5db26e71e
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Sarfraznawaz2005\\VisitLog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -562,6 +575,15 @@ class ComposerStaticInit049601520a4c5f8740d66bb5db26e71e
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutController.php',
+        'App\\Http\\Controllers\\Admin\\AdminAboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminAboutController.php',
+        'App\\Http\\Controllers\\Admin\\AdminBlogsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminBlogsController.php',
+        'App\\Http\\Controllers\\Admin\\AdminContactsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminContactsController.php',
+        'App\\Http\\Controllers\\Admin\\AdminHomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminHomeController.php',
+        'App\\Http\\Controllers\\Admin\\AdminProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminProfileController.php',
+        'App\\Http\\Controllers\\Admin\\AdminProjectsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminProjectsController.php',
+        'App\\Http\\Controllers\\Admin\\AdminServicesController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminServicesController.php',
+        'App\\Http\\Controllers\\Admin\\AdminSliderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminSliderController.php',
+        'App\\Http\\Controllers\\Admin\\AdminUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminUsersController.php',
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
         'App\\Http\\Controllers\\Admin\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LoginController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -4511,6 +4533,13 @@ class ComposerStaticInit049601520a4c5f8740d66bb5db26e71e
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
         'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
+        'Sarfraznawaz2005\\VisitLog\\Browser' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Browser.php',
+        'Sarfraznawaz2005\\VisitLog\\Facades\\VisitLog' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Facades/VisitLog.php',
+        'Sarfraznawaz2005\\VisitLog\\Http\\Controllers\\VisitLogController' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Http/Controllers/VisitLogController.php',
+        'Sarfraznawaz2005\\VisitLog\\Middleware\\ipCheckMiddleware' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Middleware/ipCheckMiddleware.php',
+        'Sarfraznawaz2005\\VisitLog\\Models\\VisitLog' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Models/VisitLog.php',
+        'Sarfraznawaz2005\\VisitLog\\VisitLog' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/VisitLog.php',
+        'Sarfraznawaz2005\\VisitLog\\VisitLogServiceProvider' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/VisitLogServiceProvider.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -5534,6 +5563,11 @@ class ComposerStaticInit049601520a4c5f8740d66bb5db26e71e
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'Yousefpackage\\Visits\\Http\\Controllers\\VisitController' => __DIR__ . '/..' . '/yousefpackage/visits/src/Http/Controllers/VisitController.php',
+        'Yousefpackage\\Visits\\Http\\Middleware\\VistsMiddleware' => __DIR__ . '/..' . '/yousefpackage/visits/src/Http/Middleware/VistsMiddleware.php',
+        'Yousefpackage\\Visits\\Models\\Visit' => __DIR__ . '/..' . '/yousefpackage/visits/src/Models/Visit.php',
+        'Yousefpackage\\Visits\\RoutePackageServiceProvider' => __DIR__ . '/..' . '/yousefpackage/visits/src/RoutePackageServiceProvider.php',
+        'Yousefpackage\\Visits\\VisitServiceProvider' => __DIR__ . '/..' . '/yousefpackage/visits/src/VisitServiceProvider.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
