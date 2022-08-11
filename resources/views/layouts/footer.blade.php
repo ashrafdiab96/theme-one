@@ -83,9 +83,9 @@
                             <li class="footer-item">
                                 <a href="{{ url('service/'.$ser->id) }}" class="footer-link text-capitalize">
                                     @if (app()->getLocale() == 'en')
-                                        {{ $ser->name_en }}
+                                        {{ Str::limit($ser->name_en, 15) }}
                                     @else
-                                        {{ $ser->name_ar }}
+                                        {{ Str::limit($ser->name_ar, 15) }}
                                     @endif
                                 </a>
                             </li>

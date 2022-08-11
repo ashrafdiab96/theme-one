@@ -95,10 +95,10 @@
                             <li class="footer-item">
                                 <a href="<?php echo e(url('service/'.$ser->id)); ?>" class="footer-link text-capitalize">
                                     <?php if(app()->getLocale() == 'en'): ?>
-                                        <?php echo e($ser->name_en); ?>
+                                        <?php echo e(Str::limit($ser->name_en, 15)); ?>
 
                                     <?php else: ?>
-                                        <?php echo e($ser->name_ar); ?>
+                                        <?php echo e(Str::limit($ser->name_ar, 15)); ?>
 
                                     <?php endif; ?>
                                 </a>
