@@ -81,7 +81,7 @@
                                     <?php endif; ?>
                                 </h3>
                             </div>
-                            <a href="#" class="service-overlay">
+                            <a href="<?php echo e(url('service/'.$service->id)); ?>" class="service-overlay">
                                 <div class="overlay-plus">
                                     <i class="fas fa-plus-circle"></i>
                                 </div>
@@ -131,12 +131,12 @@
                 <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-3">
                         <div class="project">
-                            <a href="#" class="project-content">
+                            <a href="<?php echo e(url('project/'.$project->id)); ?>" class="project-content">
                                 <div class="project-img h-100">
                                     <img src="<?php echo e(asset('assets/upload/projects/'.$project->image)); ?>" alt="Project">
                                 </div>
                             </a>
-                            <a href="#" class="project-overlay">
+                            <a href="<?php echo e(url('project/'.$project->id)); ?>" class="project-overlay">
                                 <div class="overlay-plus">
                                     <i class="fas fa-plus-circle"></i>
                                 </div>
@@ -172,7 +172,7 @@
             <div class="row">
                 <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-6">
-                        <a href="#">
+                        <a href="<?php echo e(url('blog/'.$blog->id)); ?>">
                             <div class="recent-blogs">
                                 <div class="blog-img">
                                     <img src="<?php echo e(asset('assets/upload/blogs/'.$blog->image)); ?>" alt="Blog Image">

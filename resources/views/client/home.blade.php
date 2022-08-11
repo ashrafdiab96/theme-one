@@ -76,7 +76,7 @@
                                     @endif
                                 </h3>
                             </div>
-                            <a href="#" class="service-overlay">
+                            <a href="{{ url('service/'.$service->id) }}" class="service-overlay">
                                 <div class="overlay-plus">
                                     <i class="fas fa-plus-circle"></i>
                                 </div>
@@ -122,12 +122,12 @@
                 @foreach ($projects as $project)
                     <div class="col-md-3">
                         <div class="project">
-                            <a href="#" class="project-content">
+                            <a href="{{ url('project/'.$project->id) }}" class="project-content">
                                 <div class="project-img h-100">
                                     <img src="{{ asset('assets/upload/projects/'.$project->image) }}" alt="Project">
                                 </div>
                             </a>
-                            <a href="#" class="project-overlay">
+                            <a href="{{ url('project/'.$project->id) }}" class="project-overlay">
                                 <div class="overlay-plus">
                                     <i class="fas fa-plus-circle"></i>
                                 </div>
@@ -161,7 +161,7 @@
             <div class="row">
                 @foreach ($blogs as $blog)
                     <div class="col-md-6">
-                        <a href="#">
+                        <a href="{{ url('blog/'.$blog->id) }}">
                             <div class="recent-blogs">
                                 <div class="blog-img">
                                     <img src="{{ asset('assets/upload/blogs/'.$blog->image) }}" alt="Blog Image">
