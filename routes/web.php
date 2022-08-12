@@ -16,6 +16,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminMessagesController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminProjectsController;
 use App\Http\Controllers\Admin\AdminServicesController;
@@ -165,6 +166,10 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/user/profile', [ProfileController::class, 'index'])->name('admin-profile');
     Route::post('/admin/user/edit-profile', [ProfileController::class, 'update'])->name('admin-profile-update');
     Route::post('/admin/user/edit-profile-password', [ProfileController::class, 'updatePassword'])->name('admin-profile-update-pass');
+
+    // MESSAGES ROUTES
+    Route::get('/admin/messages', [AdminMessagesController::class, 'index'])->name('admin-messages');
+    Route::get('/admin/messages/connect/{id}', [AdminMessagesController::class, 'coneected'])->name('admin-messages-update');
 
 });
 

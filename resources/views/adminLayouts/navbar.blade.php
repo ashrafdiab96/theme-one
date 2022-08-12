@@ -143,9 +143,16 @@
                     </li>
 
                     <li class="nav-item navbar-link">
+                        <a href="{{ url('admin/messages') }}" class="nav-link {{ request()->is('admin/messages') || request()->is('admin/messages/*') || request()->is('admin/message/*') ? 'active-nav-link' : '' }}">
+                            <i class="fas fa-comment"></i>
+                            <p>Messages</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item navbar-link">
                         <a href="{{ url('admin/users') }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') || request()->is('admin/user/*') ? 'active-nav-link' : '' }}">
                             <i class="fas fa-user"></i>
-                            <p>Users</p>
+                            <p>Admins</p>
                         </a>
                     </li>
 
