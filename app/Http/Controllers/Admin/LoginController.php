@@ -15,7 +15,7 @@ class LoginController extends Controller
      */
     public function index ()
     {
-        return view('auth.login');
+        return Auth::check() ? redirect()->to('/admin/dashboard') : view('auth.login');
     }
 
     /**
