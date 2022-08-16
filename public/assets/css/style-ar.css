@@ -1,4 +1,8 @@
 /* Start main navbar */
+*, body, html {
+    direction: rtl !important;
+}
+
 body {
     color: #000;
     font-family: 'Cairo', sans-serif !important;

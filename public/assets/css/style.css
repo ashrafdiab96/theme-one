@@ -1236,6 +1236,12 @@ input[type=number] {
     padding: 50px;
 }
 
+@media(max-width: 992px) {
+    .contacts-content {
+        padding: 0px;
+    }
+}
+
 .contacts-content .contacts-desc::after {
     content: ' ';
     display: block;
@@ -1347,3 +1353,12 @@ button:active {
 
 
 /* End contacs page */
+
+/* General */
+@media(max-width: 992px) {
+    section.services,
+    section.projects,
+    section.blogs {
+        padding: 50px 20px !important;
+    }
+}

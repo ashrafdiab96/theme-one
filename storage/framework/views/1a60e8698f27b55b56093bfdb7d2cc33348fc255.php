@@ -129,7 +129,7 @@
             </div>
             <div class="row mt-5">
                 <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-md-3">
+                    <div class="col-md-3 my-4">
                         <div class="project">
                             <a href="<?php echo e(url('project/'.$project->id)); ?>" class="project-content">
                                 <div class="project-img h-100">
@@ -171,7 +171,7 @@
             </div>
             <div class="row">
                 <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-md-6">
+                    <div class="col-md-6 my-4">
                         <a href="<?php echo e(url('blog/'.$blog->id)); ?>">
                             <div class="recent-blogs">
                                 <div class="blog-img">

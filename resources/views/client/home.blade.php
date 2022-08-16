@@ -120,7 +120,7 @@
             </div>
             <div class="row mt-5">
                 @foreach ($projects as $project)
-                    <div class="col-md-3">
+                    <div class="col-md-3 my-4">
                         <div class="project">
                             <a href="{{ url('project/'.$project->id) }}" class="project-content">
                                 <div class="project-img h-100">
@@ -160,7 +160,7 @@
             </div>
             <div class="row">
                 @foreach ($blogs as $blog)
-                    <div class="col-md-6">
+                    <div class="col-md-6 my-4">
                         <a href="{{ url('blog/'.$blog->id) }}">
                             <div class="recent-blogs">
                                 <div class="blog-img">
