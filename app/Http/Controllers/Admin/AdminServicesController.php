@@ -145,10 +145,10 @@ class AdminServicesController extends Controller
             $service_bc = public_path('assets/upload/services/'.$service->background);
             $service_iag = public_path('assets/upload/services/'.$service->image);
             if(isset($service->background)) {
-                unlink($service_bc);
+                // unlink($service_bc);
             }
             if(isset($service->image)) {
-                unlink($service_iag);
+                // unlink($service_iag);
             }
 
             $service_imgs = ServicesImages::where('service_id', $id)->get();
