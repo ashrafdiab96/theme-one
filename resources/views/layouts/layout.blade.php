@@ -32,7 +32,7 @@
 
 </head>
 <body>
-    @include('layouts.topNav')
+    {{-- @include('layouts.topNav') --}}
     @include('layouts.navbar')
 
     <section class="page">

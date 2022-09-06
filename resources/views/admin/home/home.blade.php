@@ -84,6 +84,18 @@
                                         <th class="w-25">Customers number</th>
                                         <td class="w-75">{{ $home->customers }}</td>
                                     </tr>
+                                    <tr>
+                                        <th class="w-25">Navbar logo</th>
+                                        <td class="w-75">
+                                            <img class="logo-img" src="{{ asset('assets/upload/home/'.$home->nav_logo) }}" alt="Logo">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-25">Footer logo</th>
+                                        <td class="w-75">
+                                            <img class="logo-img" src="{{ asset('assets/upload/home/'.$home->footer_logo) }}" alt="Logo">
+                                        </td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>

@@ -43,9 +43,11 @@ jQuery(document).ready(function($) {
         let scrollTop = $(window).scrollTop();
         if(scrollTop >= 160) {
             $('.main-nav-cont').addClass('new-nav-style');
+            $('.nav-logo').addClass('new-logo');
         }
         else {
             $('.main-nav-cont').removeClass('new-nav-style');
+            $('.nav-logo').removeClass('new-logo');
         }
     });
 

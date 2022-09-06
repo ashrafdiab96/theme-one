@@ -1,4 +1,9 @@
 /* Start navbar */
+html,
+body {
+    height: 100% !important;
+}
+
 .nav-admin-data {
     display: flex;
     flex-direction: revert;
@@ -93,6 +98,18 @@ input[type=number] {
 @media(max-width: 992px) {
     .about-img-bc,
     .about-img {
+        width: auto;
+        height: auto;
+    }
+}
+
+.logo-img {
+    width: 500px;
+    height: 200px;
+}
+
+@media(max-width: 992px) {
+    .logo-img {
         width: auto;
         height: auto;
     }

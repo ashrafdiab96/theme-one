@@ -40,7 +40,7 @@
         </div>
     </div>
     <hr class="about-content-line">
-    <div class="founder">
+    <div class="founder" style="background-color: <?php echo e($about->founder_bc); ?>; color: <?php echo e($about->founder_color); ?>;">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">

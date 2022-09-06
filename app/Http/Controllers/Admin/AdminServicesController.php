@@ -109,7 +109,7 @@ class AdminServicesController extends Controller
             if($request->hasFile('image')) {
                 $old_img = public_path('assets/upload/services/'.$service->image);
                 if(isset($service->image)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $filePath = $request->file('image')->move('assets/upload/services', $image_name);
@@ -118,7 +118,7 @@ class AdminServicesController extends Controller
             if($request->hasFile('background')) {
                 $old_img = public_path('assets/upload/services/'.$service->background);
                 if(isset($service->background)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/services', $image_name);
@@ -155,7 +155,7 @@ class AdminServicesController extends Controller
             if($service_imgs) {
                 foreach($service_imgs as $img) {
                     $serv_imgs = public_path('assets/upload/services_images/'.$img->image);
-                    unlink($serv_imgs);
+                    // unlink($serv_imgs);
                     $img->delete();
                 }
             }
@@ -192,7 +192,7 @@ class AdminServicesController extends Controller
             if($request->hasFile('background')) {
                 $service_bc = public_path('assets/upload/services/'.$home->services_bc);
                 if(isset($home->services_bc)) {
-                    unlink($service_bc);
+                    // unlink($service_bc);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/services', $image_name);
@@ -280,7 +280,7 @@ class AdminServicesController extends Controller
                 $img = ServicesImages::findOrFail($id);
                 $old_img = public_path('assets/upload/services_images/'.$img->image);
                 if($img->image) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $filePath = $request->file('image')->move('assets/upload/services_images', $image_name);
@@ -306,7 +306,7 @@ class AdminServicesController extends Controller
             $img = ServicesImages::findOrFail($id);
             $service_img = public_path('assets/upload/services_images/'.$img->image);
             if(isset($img->image)) {
-                unlink($service_img);
+                // unlink($service_img);
             }
 
             $img->delete();

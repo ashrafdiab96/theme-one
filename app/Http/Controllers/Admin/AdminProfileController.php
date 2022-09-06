@@ -50,7 +50,7 @@ class AdminProfileController extends Controller
             if($request->hasFile('background')) {
                 $old_img = public_path('assets/upload/profile/'.$profile->background);
                 if(isset($profile->background)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/profile', $image_name);

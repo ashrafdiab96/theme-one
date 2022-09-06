@@ -57,7 +57,7 @@ class AdminContactsController extends Controller
             if($request->hasFile('background')) {
                 $old_img = public_path('assets/upload/contacts/'.$contacts->background);
                 if(isset($contacts->background)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
 
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();

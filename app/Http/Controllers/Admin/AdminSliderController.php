@@ -87,7 +87,7 @@ class AdminSliderController extends Controller
             if($request->hasFile('image')) {
                 $old_img = public_path('assets/upload/slider/'.$slider->image);
                 if(isset($slider->image)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $file_path = $request->file('image')->move('assets/upload/slider', $image_name);
@@ -113,7 +113,7 @@ class AdminSliderController extends Controller
             $slider = Slider::findOrFail($id);
             $img = public_path('assets/upload/slider/'.$slider->image);
             if(isset($slider->image)) {
-                unlink($img);
+                // unlink($img);
             }
             $slider->delete();
             return redirect('/admin/slider')->with('slider_deleted', 'Slider has been deleted successfully');

@@ -147,6 +147,14 @@ input[type=number] {
     color: rgba(0, 0, 0, 0.6);
 }
 
+.nav-logo {
+    height: 70px;
+    width: 250px;
+}
+
+.new-logo {
+    height: 40px !important;
+}
 
 /* End main navbar */
 
@@ -156,6 +164,7 @@ input[type=number] {
 .footer {
     background-color: #2a2a2a;
     color: #fff;
+    font-size: 13px;
 }
 
 .footer-logo-desc p {
@@ -573,9 +582,14 @@ input[type=number] {
     padding: 50px;
 }
 
-.founder .container .row img {
+.founder img {
     height: 250px;
-    width: 250px;
+    width: 100%;
+}
+
+.footer_logo {
+    height: 80px;
+    width: 100%;
 }
 
 .statistics {

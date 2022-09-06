@@ -102,6 +102,14 @@
                                             <img class="about-img" src="{{ asset('assets/upload/about/'.$about->founder_2_img) }}" alt="Founder image">
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th class="w-25">Founder background</th>
+                                        <td class="w-75">{{ $about->founder_bc }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w-25">Founders font color</th>
+                                        <td class="w-75">{{ $about->founder_color }}</td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>

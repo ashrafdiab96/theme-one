@@ -38,7 +38,7 @@ return [
     'projects' => 'projects',
     'employees' => 'employees',
     'customers' => 'customers',
-    'mission' => 'missions',
+    'mission' => 'mission',
     'values' => 'values',
     'our_values' => 'our core values',
     'vision' => 'vision',

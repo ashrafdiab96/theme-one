@@ -108,7 +108,7 @@ class AdminBlogsController extends Controller
             if($request->hasFile('image')) {
                 $old_img = public_path('assets/upload/blogs/'.$blog->image);
                 if(isset($blog->image)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $filePath = $request->file('image')->move('assets/upload/blogs', $image_name);
@@ -117,7 +117,7 @@ class AdminBlogsController extends Controller
             if($request->hasFile('background')) {
                 $old_img = public_path('assets/upload/blogs/'.$blog->background);
                 if(isset($blog->background)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/blogs', $image_name);
@@ -144,17 +144,17 @@ class AdminBlogsController extends Controller
             $blog_bc = public_path('assets/upload/blogs/'.$blog->background);
             $blog_iag = public_path('assets/upload/blogs/'.$blog->image);
             if(isset($blog->background)) {
-                unlink($blog_bc);
+                // unlink($blog_bc);
             }
             if(isset($blog->image)) {
-                unlink($blog_iag);
+                // unlink($blog_iag);
             }
 
             $blog_imgs = BlogsImages::where('blog_id', $id)->get();
             if($blog_imgs) {
                 foreach($blog_imgs as $img) {
                     $blg_imgs = public_path('assets/upload/blogs_images/'.$img->image);
-                    unlink($blg_imgs);
+                    // unlink($blg_imgs);
                     $img->delete();
                 }
             }
@@ -191,7 +191,7 @@ class AdminBlogsController extends Controller
             if($request->hasFile('background')) {
                 $blog_bc = public_path('assets/upload/blogs/'.$home->blogs_bc);
                 if(isset($home->blogs_bc)) {
-                    unlink($blog_bc);
+                    // unlink($blog_bc);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/blogs', $image_name);
@@ -279,7 +279,7 @@ class AdminBlogsController extends Controller
                 $img = BlogsImages::findOrFail($id);
                 $old_img = public_path('assets/upload/blogs_images/'.$img->image);
                 if($img->image) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $filePath = $request->file('image')->move('assets/upload/blogs_images', $image_name);
@@ -305,7 +305,7 @@ class AdminBlogsController extends Controller
             $img = BlogsImages::findOrFail($id);
             $blog_img = public_path('assets/upload/blogs_images/'.$img->image);
             if(isset($img->image)) {
-                unlink($blog_img);
+                // unlink($blog_img);
             }
 
             $img->delete();

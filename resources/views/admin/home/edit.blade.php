@@ -55,6 +55,14 @@
                             <label>Customers number</label>
                             <input type="number" class="form-control" name="customers" value="{{ $home->customers }}">
                         </div>
+                        <div class="form-group">
+                            <label>Navbar logo</label>
+                            <input type="file" class="form-control" name="nav_logo">
+                        </div>
+                        <div class="form-group">
+                            <label>Footer logo</label>
+                            <input type="file" class="form-control" name="footer_logo">
+                        </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-success btn-sm btn-flat">Update</button>
                         </div>

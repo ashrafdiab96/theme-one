@@ -101,7 +101,7 @@ class AdminProjectsController extends Controller
             if($request->hasFile('image')) {
                 $old_img = public_path('assets/upload/projects/'.$project->image);
                 if(isset($project->image)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $filePath = $request->file('image')->move('assets/upload/projects', $image_name);
@@ -110,7 +110,7 @@ class AdminProjectsController extends Controller
             if($request->hasFile('background')) {
                 $old_img = public_path('assets/upload/projects/'.$project->background);
                 if(isset($project->background)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/projects', $image_name);
@@ -137,17 +137,17 @@ class AdminProjectsController extends Controller
             $project_bc = public_path('assets/upload/projects/'.$project->background);
             $project_iag = public_path('assets/upload/projects/'.$project->image);
             if(isset($project->background)) {
-                unlink($project_bc);
+                // unlink($project_bc);
             }
             if(isset($project->image)) {
-                unlink($project_iag);
+                // unlink($project_iag);
             }
 
             $project_imgs = ProjectsImages::where('project_id', $id)->get();
             if($project_imgs) {
                 foreach($project_imgs as $img) {
                     $proj_imgs = public_path('assets/upload/projects_images/'.$img->image);
-                    unlink($proj_imgs);
+                    // unlink($proj_imgs);
                     $img->delete();
                 }
             }
@@ -184,7 +184,7 @@ class AdminProjectsController extends Controller
             if($request->hasFile('background')) {
                 $project_bc = public_path('assets/upload/projects/'.$home->projects_bc);
                 if(isset($home->projects_bc)) {
-                    unlink($project_bc);
+                    // unlink($project_bc);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/projects', $image_name);
@@ -272,7 +272,7 @@ class AdminProjectsController extends Controller
                 $img = ProjectsImages::findOrFail($id);
                 $old_img = public_path('assets/upload/projects_images/'.$img->image);
                 if($img->image) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $filePath = $request->file('image')->move('assets/upload/projects_images', $image_name);
@@ -298,7 +298,7 @@ class AdminProjectsController extends Controller
             $img = ProjectsImages::findOrFail($id);
             $project_img = public_path('assets/upload/projects_images/'.$img->image);
             if(isset($img->image)) {
-                unlink($project_img);
+                // unlink($project_img);
             }
 
             $img->delete();

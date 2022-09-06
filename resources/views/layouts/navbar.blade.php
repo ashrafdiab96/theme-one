@@ -2,7 +2,9 @@
 
     <div class="container nav-container h-100">
         <nav class="navbar navbar-expand-sm navbar-light bg-trasperant h-100 p-0">
-            <a class="navbar-brand main-logo" href="{{ url('/') }}">F & D ENGINEERING</a>
+            <a class="navbar-brand main-logo" href="{{ url('/') }}">
+                <img class="nav-logo" src="{{ asset('assets/upload/home/'.$nav_logo) }}" alt="Logo">
+            </a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -48,10 +48,12 @@ class AdminAboutController extends Controller
             $about->desc_en = $request->desc_en;
             $about->founders_msg_ar = $request->founders_msg_ar;
             $about->founders_msg_en = $request->founders_msg_en;
+            $about->founder_bc = $request->founder_bc;
+            $about->founder_color = $request->founder_color;
             if($request->hasFile('background')) {
                 $old_img = public_path('assets/upload/about/'.$about->background);
                 if(isset($about->background)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('background')->getClientOriginalName();
                 $filePath = $request->file('background')->move('assets/upload/about', $image_name);
@@ -60,7 +62,7 @@ class AdminAboutController extends Controller
             if($request->hasFile('founder_1_img')) {
                 $old_img = public_path('assets/upload/about/'.$about->founder_1_img);
                 if(isset($about->founder_1_img)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('founder_1_img')->getClientOriginalName();
                 $filePath = $request->file('founder_1_img')->move('assets/upload/about', $image_name);
@@ -69,7 +71,7 @@ class AdminAboutController extends Controller
             if($request->hasFile('founder_2_img')) {
                 $old_img = public_path('assets/upload/about/'.$about->founder_2_img);
                 if(isset($about->founder_2_img)) {
-                    unlink($old_img);
+                    // unlink($old_img);
                 }
                 $image_name = time().'_'.$request->file('founder_2_img')->getClientOriginalName();
                 $filePath = $request->file('founder_2_img')->move('assets/upload/about', $image_name);

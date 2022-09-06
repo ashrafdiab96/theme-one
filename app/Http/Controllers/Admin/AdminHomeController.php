@@ -47,6 +47,16 @@ class AdminHomeController extends Controller
             $home->projects = $request->projects;
             $home->employees = $request->employees;
             $home->customers = $request->customers;
+            if($request->hasFile('nav_logo')) {
+                $image_name = time().'_'.$request->file('nav_logo')->getClientOriginalName();
+                $filePath = $request->file('nav_logo')->move('assets/upload/home', $image_name);
+                $home->nav_logo = time().'_'.$request->file('nav_logo')->getClientOriginalName();
+            }
+            if($request->hasFile('footer_logo')) {
+                $image_name = time().'_'.$request->file('footer_logo')->getClientOriginalName();
+                $filePath = $request->file('footer_logo')->move('assets/upload/home', $image_name);
+                $home->footer_logo = time().'_'.$request->file('footer_logo')->getClientOriginalName();
+            }
             $home->save();
             return redirect()->to('/admin/home')->with('home_success', 'Home data has been updated successfully');
         } catch(Exception $e) {

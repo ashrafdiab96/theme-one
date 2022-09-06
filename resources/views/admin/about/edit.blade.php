@@ -67,6 +67,14 @@
                             <label>Founder 1 image</label>
                             <input type="file" class="form-control" name="founder_2_img">
                         </div>
+                        <div class="form-group">
+                            <label>Founder background</label>
+                            <input type="text" class="form-control" name="founder_bc">
+                        </div>
+                        <div class="form-group">
+                            <label>Founder font color</label>
+                            <input type="text" class="form-control" name="founder_color">
+                        </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-success btn-sm btn-flat">Update</button>
                         </div>
