@@ -62,6 +62,7 @@ Route::get('/blog/{id}', [BlogsController::class, 'blog'])->name('blog');
 // CONTACTS ROUTES
 Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
 Route::post('/contact/message', [ContactsController::class, 'message'])->name('message');
+Route::get('/contact/send-mail', [ContactsController::class, 'sendEmail'])->name('send-email');
 
 
 // ADMIN ROUTES

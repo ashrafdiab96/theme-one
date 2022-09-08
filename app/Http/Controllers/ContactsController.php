@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MessagesMail;
 use App\Models\Messages;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactsController extends Controller
 {
@@ -39,7 +42,20 @@ class ContactsController extends Controller
         $message->message = $request->message;
         $message->contacted = 0;
         $message->save();
+        // $saved_meg = Messages::where('id', $message->id)->first();
+        $this->sendEmail($message);
         return response()->json('saved');
+    }
+
+    /**
+     * sendEmail function
+     * send email to admin with message data
+     * @param string $email
+     * @return void
+     */
+    public function sendEmail($message)
+    {
+        Mail::to(env('MAIL_USERNAME'))->send(new MessagesMail($message));
     }
 
 }
