@@ -17,7 +17,7 @@ class WelcomeController extends Controller
         $home = Home::first();
         $slider = Slider::get();
         $services = Services::orderBy('id', 'desc')->take(6)->get();
-        $projects = Projects::orderBy('id', 'desc')->take(4)->get();
+        $projects = Projects::orderBy('id', 'desc')->take(10)->get();
         $blogs = Blogs::orderBy('id', 'desc')->take(2)->get();
         return view('client.home', compact([
             'home', 'projects', 'services', 'slider', 'blogs'

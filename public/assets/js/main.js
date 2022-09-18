@@ -54,10 +54,23 @@ jQuery(document).ready(function($) {
     /* End navbar */
 
     /* Start slider */
-    var splide = new Splide('.splide', {
+    let splide = new Splide('#slider-splide', {
         autoplay: 'true',
     });
     splide.mount();
     /* End slider */
+
+    /* Start projects slider */
+    let splide_proj = new Splide('#projects-splide', {
+        autoplay: 'true',
+        perPage: 4,
+        rewind : true,
+        type: 'loop',
+        focus: 'center',
+        pagination: false,
+        arrows: false,
+      });
+      splide_proj.mount();
+    /* End projects slider */
 
 });

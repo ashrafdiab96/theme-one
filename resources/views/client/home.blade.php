@@ -8,7 +8,7 @@
 <div class="container-fluid p-0">
     {{-- Start slider section --}}
     <div class="row m-0">
-        <div class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
+        <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
             <div class="splide__track h-100">
                   <ul class="splide__list h-100">
                     @foreach ($slider as $sl)
@@ -45,7 +45,7 @@
                     @endforeach
                   </ul>
             </div>
-          </div>
+        </div>
     </div>
     {{-- End slider section --}}
 
@@ -119,7 +119,7 @@
                 </div>
             </div>
             <div class="row mt-5">
-                @foreach ($projects as $project)
+                {{-- @foreach ($projects as $project)
                     <div class="col-md-3 my-4">
                         <div class="project">
                             <a href="{{ url('project/'.$project->id) }}" class="project-content">
@@ -134,7 +134,31 @@
                             </a>
                         </div>
                     </div>
-                @endforeach
+                @endforeach --}}
+                <div id="projects-splide"class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track h-100">
+                          <ul class="splide__list h-100">
+                            @foreach ($projects as $project)
+                                <li class="splide__slide h-100 p-2">
+                                    <div class="slider-all h-100">
+                                        <div class="slider-image h-100">
+                                            <div class="project">
+                                                <a href="{{ url('project/'.$project->id) }}" class="project-content">
+                                                    <img class="img-fluid h-100 w-100" src="{{ asset('assets/upload/projects/'.$project->image) }}" alt="Project Image">
+                                                </a>
+                                                <a href="{{ url('project/'.$project->id) }}" class="project-overlay">
+                                                    <div class="overlay-plus">
+                                                        <i class="fas fa-plus-circle"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            @endforeach
+                          </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

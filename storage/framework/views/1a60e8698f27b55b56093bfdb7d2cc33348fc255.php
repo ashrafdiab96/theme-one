@@ -7,7 +7,7 @@
 <div class="container-fluid p-0">
     
     <div class="row m-0">
-        <div class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
+        <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
             <div class="splide__track h-100">
                   <ul class="splide__list h-100">
                     <?php $__currentLoopData = $slider; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sl): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -48,7 +48,7 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                   </ul>
             </div>
-          </div>
+        </div>
     </div>
     
 
@@ -128,22 +128,31 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-md-3 my-4">
-                        <div class="project">
-                            <a href="<?php echo e(url('project/'.$project->id)); ?>" class="project-content">
-                                <div class="project-img h-100">
-                                    <img src="<?php echo e(asset('assets/upload/projects/'.$project->image)); ?>" alt="Project">
-                                </div>
-                            </a>
-                            <a href="<?php echo e(url('project/'.$project->id)); ?>" class="project-overlay">
-                                <div class="overlay-plus">
-                                    <i class="fas fa-plus-circle"></i>
-                                </div>
-                            </a>
-                        </div>
+                
+                <div id="projects-splide"class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track h-100">
+                          <ul class="splide__list h-100">
+                            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <li class="splide__slide h-100 p-2">
+                                    <div class="slider-all h-100">
+                                        <div class="slider-image h-100">
+                                            <div class="project">
+                                                <a href="<?php echo e(url('project/'.$project->id)); ?>" class="project-content">
+                                                    <img class="img-fluid h-100 w-100" src="<?php echo e(asset('assets/upload/projects/'.$project->image)); ?>" alt="Project Image">
+                                                </a>
+                                                <a href="<?php echo e(url('project/'.$project->id)); ?>" class="project-overlay">
+                                                    <div class="overlay-plus">
+                                                        <i class="fas fa-plus-circle"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                          </ul>
                     </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </div>
             </div>
         </div>
     </section>
