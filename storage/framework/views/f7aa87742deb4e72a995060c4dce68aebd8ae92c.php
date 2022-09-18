@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title'); ?>
     <?php echo e(__('app.f_d')); ?> | <?php echo e(__('app.contact')); ?>
 
@@ -16,7 +14,7 @@
     </div>
 
     <div class="contacts-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 contacts-desc">
                     <p class="text-muted text-capitalize p-0 m-0"><?php echo e(__('app.why_us')); ?></p>

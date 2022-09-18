@@ -21,7 +21,7 @@
     </div>
 
     <div class="service-page-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-9">
                     <div class="service-page-title mb-4">

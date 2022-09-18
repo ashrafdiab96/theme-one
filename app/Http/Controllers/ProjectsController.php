@@ -17,7 +17,7 @@ class ProjectsController extends Controller
      */
     public function index ()
     {
-        $projects = Projects::get();
+        $projects = Projects::paginate(6);
         $home = Home::first();
         return view('client.projects', compact(['projects', 'home']));
     }

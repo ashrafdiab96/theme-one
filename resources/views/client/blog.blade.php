@@ -21,7 +21,7 @@
     </div>
 
     <div class="blog-page-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-9">
                     <div class="blog-page-title mb-4">

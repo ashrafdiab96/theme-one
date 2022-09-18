@@ -14,7 +14,7 @@
     </div>
 </div>
 <div class="profile-content">
-    <div class="container">
+    <div class="container-fluid">
         <div class="profile-title">
             <h3 class="text-capitalize"><?php echo e(__('app.mission')); ?></h3>
         </div>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="values-header">
             <h3 class="text-capitalize"><?php echo e(__('app.our_values')); ?></h3>
         </div>
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="vision-title">
             <h3 class="text-capitalize"><?php echo e(__('app.vision')); ?></h3>
         </div>
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="strength-title">
             <h3 class="text-capitalize"><?php echo e(__('app.strength')); ?></h3>
         </div>

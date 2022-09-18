@@ -37,7 +37,7 @@
                                         </p>
                                     </div>
                                     <div class="slider-button">
-                                        <a class="btn btn-flat btn-sm text-capitalize">{{ __('app.more') }}</a>
+                                        <a class="btn btn-flat btn-sm text-capitalize" href="{{ url('/services') }}">{{ __('app.more') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
 
     {{-- Start services section --}}
     <section class="services">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row main-title">
                 <div class="services-title">
                     <h4 class="text-uppercase">{{ __('app.services') }}</h4>
@@ -102,7 +102,7 @@
 
     {{-- Start projects section --}}
     <section class="projects">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
                     <div class="projects-title">
@@ -142,7 +142,7 @@
 
     {{-- Start blogs section --}}
     <section class="blogs">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="blogs-title">

@@ -14,7 +14,7 @@
         <div class="col-md-8"></div>
     </div>
     <div class="about-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="about-title">
                 <p class="text-capitalize text-muted">{{ __('app.who_we_are') }}</p>
             </div>
@@ -38,7 +38,7 @@
     </div>
     <hr class="about-content-line">
     <div class="founder" style="background-color: {{ $about->founder_bc }}; color: {{ $about->founder_color }};">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
                     <img src="{{ asset('assets/upload/about/'.$about->founder_1_img) }}" alt="Founder Image">
@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="statistics" id="statistics">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row justify-content-around align-items-center">
                 <div class="col-ms-3">
                     <h3 class="text-capitalize text-center numbers">{{ $home->establish }}</h3>

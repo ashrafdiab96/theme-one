@@ -7,6 +7,7 @@ use App\Models\Home;
 use App\Models\Services;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -37,5 +38,7 @@ class AppServiceProvider extends ServiceProvider
             'nav_logo' => $nav_logo,
             'footer_logo' => $footer_logo
         ]);
+
+        Paginator::useBootstrap();
     }
 }

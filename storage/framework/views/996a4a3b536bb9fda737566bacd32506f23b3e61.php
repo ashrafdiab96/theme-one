@@ -13,7 +13,7 @@
         <div class="col-md-8"></div>
     </div>
     <div class="blogs-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $blog): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-4">

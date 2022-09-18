@@ -15,7 +15,7 @@
     </div>
 
     <div class="projects-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 @foreach ($projects as $project)
                     <div class="col-md-4">
@@ -40,6 +40,11 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="row">
+                <span>
+                    {{ $projects->links() }}
+                </span>
             </div>
         </div>
     </div>

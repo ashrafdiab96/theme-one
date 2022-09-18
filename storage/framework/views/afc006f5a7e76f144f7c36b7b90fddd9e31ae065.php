@@ -8,6 +8,7 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-1"></div>
             <div class="col-md-3">
                 <div class="ftco-footer-widget">
                     <h3 class="text-capitalize mb-3">
@@ -29,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="ftco-footer-widget ml-md-5">
                     <h2 class="text-capitalize mb-3">
                         <i class="fas fa-link"></i>
@@ -66,30 +67,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="ftco-footer-widget ml-md-5">
-                    <h2 class="text-capitalize mb-3">
-                        <i class="fab fa-servicestack"></i>
-                        <?php echo e(__('app.serv')); ?>
-
-                    </h2>
-                    <ul class="list-unstyled w-75 m-auto">
-                        <?php $__currentLoopData = $services_share; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ser): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <li class="footer-item">
-                                <a href="<?php echo e(url('service/'.$ser->id)); ?>" class="footer-link text-capitalize">
-                                    <?php if(app()->getLocale() == 'en'): ?>
-                                        <?php echo e(Str::limit($ser->name_en, 15)); ?>
-
-                                    <?php else: ?>
-                                        <?php echo e(Str::limit($ser->name_ar, 15)); ?>
-
-                                    <?php endif; ?>
-                                </a>
-                            </li>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </ul>
-                </div>
-            </div>
+            
 
             <div class="col-md-3">
                 <div class="ftco-footer-widget">
@@ -131,6 +109,7 @@
                     
                 </div>
             </div>
+            <div class="col-md-1"></div>
         </div>
         <div class="text-center footer-icons">
             

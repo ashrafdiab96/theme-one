@@ -8,6 +8,7 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-1"></div>
             <div class="col-md-3">
                 <div class="ftco-footer-widget">
                     <h3 class="text-capitalize mb-3">
@@ -27,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="ftco-footer-widget ml-md-5">
                     <h2 class="text-capitalize mb-3">
                         <i class="fas fa-link"></i>
@@ -73,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            {{-- <div class="col-md-3">
                 <div class="ftco-footer-widget ml-md-5">
                     <h2 class="text-capitalize mb-3">
                         <i class="fab fa-servicestack"></i>
@@ -93,7 +94,7 @@
                         @endforeach
                     </ul>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="col-md-3">
                 <div class="ftco-footer-widget">
@@ -132,6 +133,7 @@
                     </div> --}}
                 </div>
             </div>
+            <div class="col-md-1"></div>
         </div>
         <div class="text-center footer-icons">
             {{-- <a href="{{ $contacts->fb_url }}" target="_blank">

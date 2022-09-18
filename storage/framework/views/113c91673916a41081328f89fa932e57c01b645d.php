@@ -14,7 +14,7 @@
     </div>
 
     <div class="services-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-4">

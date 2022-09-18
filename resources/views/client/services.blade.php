@@ -15,7 +15,7 @@
     </div>
 
     <div class="services-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 @foreach ($services as $service)
                     <div class="col-md-4">

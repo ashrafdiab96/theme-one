@@ -3,6 +3,14 @@
 
 <?php $__env->stopSection(); ?>
 
+<?php $__env->startSection('project-css'); ?>
+    <style>
+        .w-5 {
+            display: inline;
+        }
+    </style>
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
 <div class="container-fluid p-0 m-0">
     <div class="projects-header" style="height: 200px; background-image: url('<?php echo e(asset('assets/upload/projects/'.$home->projects_bc)); ?>')">
@@ -14,7 +22,7 @@
     </div>
 
     <div class="projects-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-4">
@@ -41,6 +49,12 @@
                         </div>
                     </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+            <div class="row">
+                <span>
+                    <?php echo e($projects->links()); ?>
+
+                </span>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
         <div class="col-md-8"></div>
     </div>
     <div class="blogs-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 @foreach ($blogs as $blog)
                     <div class="col-md-4">
