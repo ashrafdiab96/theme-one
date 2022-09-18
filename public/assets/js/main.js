@@ -68,7 +68,6 @@ jQuery(document).ready(function($) {
         type: 'loop',
         focus: 'center',
         pagination: false,
-        arrows: false,
       });
       splide_proj.mount();
     /* End projects slider */

@@ -40,7 +40,7 @@
     <div class="founder" style="background-color: {{ $about->founder_bc }}; color: {{ $about->founder_color }};">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 text-center">
                     <img src="{{ asset('assets/upload/about/'.$about->founder_1_img) }}" alt="Founder Image">
                 </div>
                 <div class="col-md-6">
@@ -53,7 +53,7 @@
                         @endif
                     </p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 text-center">
                     <img src="{{ asset('assets/upload/about/'.$about->founder_2_img) }}" alt="Founder Image">
                 </div>
             </div>

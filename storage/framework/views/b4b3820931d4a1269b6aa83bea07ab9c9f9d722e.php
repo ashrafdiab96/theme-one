@@ -43,7 +43,7 @@
     <div class="founder" style="background-color: <?php echo e($about->founder_bc); ?>; color: <?php echo e($about->founder_color); ?>;">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 text-center">
                     <img src="<?php echo e(asset('assets/upload/about/'.$about->founder_1_img)); ?>" alt="Founder Image">
                 </div>
                 <div class="col-md-6">
@@ -58,7 +58,7 @@
                         <?php endif; ?>
                     </p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 text-center">
                     <img src="<?php echo e(asset('assets/upload/about/'.$about->founder_2_img)); ?>" alt="Founder Image">
                 </div>
             </div>
