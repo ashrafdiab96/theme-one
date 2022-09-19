@@ -931,6 +931,27 @@ input[type=number] {
     bottom: -50%;
 }
 
+.projects-type {
+    margin-top: 30px;
+}
+
+.projects-type .types {
+    padding: 5px 30px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-type .types a {
+    margin: 0 20px;
+    color: #000 !important;
+}
+
+.projects-type .types a:hover {
+    color: #706d6d !important;
+    text-decoration: none;
+}
 
 /* End projects page */
 

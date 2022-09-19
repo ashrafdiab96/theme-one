@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\AdminServicesController;
 use App\Http\Controllers\Admin\AdminSliderController;
 use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\AdminProjectsTypesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -171,6 +172,14 @@ Route::middleware('auth')->group(function() {
     // MESSAGES ROUTES
     Route::get('/admin/messages', [AdminMessagesController::class, 'index'])->name('admin-messages');
     Route::get('/admin/messages/connect/{id}', [AdminMessagesController::class, 'coneected'])->name('admin-messages-update');
+
+    // PROJECTS TYPES ROUTES
+    Route::get('/admin/projects-types', [AdminProjectsTypesController::class, 'index'])->name('admin-users');
+    Route::get('/admin/projects-types/new', [AdminProjectsTypesController::class, 'new'])->name('admin-users-new');
+    Route::post('/admin/projects-types/save', [AdminProjectsTypesController::class, 'save'])->name('admin-users-save');
+    Route::get('/admin/projects-types/edit/{id}', [AdminProjectsTypesController::class, 'edit'])->name('admin-users-edit');
+    Route::post('/admin/projects-types/update/{id}', [AdminProjectsTypesController::class, 'update'])->name('admin-users-update');
+    Route::delete('/admin/projects-types/delete/{id}', [AdminProjectsTypesController::class, 'delete'])->name('admin-users-delete');
 
 });
 

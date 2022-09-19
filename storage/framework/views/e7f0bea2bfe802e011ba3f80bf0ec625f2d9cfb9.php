@@ -13,6 +13,24 @@
         <div class="col-md-8"></div>
     </div>
 
+    <div class="projects-type">
+        <div class="container">
+            <div class="types">
+                <?php $__currentLoopData = $projectsTypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <a href="">
+                        <?php if(app()->getLocale() == 'en'): ?>
+                            <?php echo e($type->name_en); ?>
+
+                        <?php else: ?>
+                            <?php echo e($type->name_ar); ?>
+
+                        <?php endif; ?>
+                    </a>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+        </div>
+    </div>
+
     <div class="projects-content">
         <div class="container-fluid">
             <div class="row">

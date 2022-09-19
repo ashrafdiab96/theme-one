@@ -6,6 +6,7 @@ use App\Models\Blogs;
 use App\Models\Home;
 use App\Models\Projects;
 use App\Models\ProjectsImages;
+use App\Models\ProjectsTypes;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
@@ -18,8 +19,9 @@ class ProjectsController extends Controller
     public function index ()
     {
         $projects = Projects::paginate(6);
+        $projectsTypes = ProjectsTypes::take(10)->get();
         $home = Home::first();
-        return view('client.projects', compact(['projects', 'home']));
+        return view('client.projects', compact(['projects', 'home', 'projectsTypes']));
     }
 
     /**

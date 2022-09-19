@@ -14,6 +14,22 @@
         <div class="col-md-8"></div>
     </div>
 
+    <div class="projects-type">
+        <div class="container">
+            <div class="types">
+                @foreach ($projectsTypes as $type)
+                    <a href="">
+                        @if(app()->getLocale() == 'en')
+                            {{ $type->name_en }}
+                        @else
+                            {{ $type->name_ar }}
+                        @endif
+                    </a>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
     <div class="projects-content">
         <div class="container-fluid">
             <div class="row">
