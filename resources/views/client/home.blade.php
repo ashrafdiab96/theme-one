@@ -7,51 +7,55 @@
 @section('content')
 <div class="container-fluid p-0">
     {{-- Start slider section --}}
-    <div class="row m-0">
-        <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
-            <div class="splide__track h-100">
-                  <ul class="splide__list h-100">
-                    @foreach ($slider as $sl)
-                        <li class="splide__slide h-100">
-                            <div class="slider-all">
-                                <div class="slider-image">
-                                    <img class="img-fluid" src="{{ url('assets/upload/slider/'.$sl->image) }}" alt="Slider image 1">
-                                </div>
-                                <div class="slider-content">
-                                    <div class="slider-title">
-                                        <h2>
-                                            @if(app()->getLocale() == 'en')
-                                                {{ $sl->title_en }}
-                                            @else
-                                                {{ $sl->title_ar }}
-                                            @endif
-                                        </h2>
+    <section class="home-slider">
+        <div class="container">
+            <div class="row m-0">
+                <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track h-100">
+                          <ul class="splide__list h-100">
+                            @foreach ($slider as $sl)
+                                <li class="splide__slide h-100">
+                                    <div class="slider-all">
+                                        <div class="slider-image">
+                                            <img class="img-fluid" src="{{ url('assets/upload/slider/'.$sl->image) }}" alt="Slider image 1">
+                                        </div>
+                                        <div class="slider-content">
+                                            <div class="slider-title">
+                                                <h2>
+                                                    @if(app()->getLocale() == 'en')
+                                                        {{ $sl->title_en }}
+                                                    @else
+                                                        {{ $sl->title_ar }}
+                                                    @endif
+                                                </h2>
+                                            </div>
+                                            <div class="slider-desc">
+                                                <p>
+                                                    @if(app()->getLocale() == 'en')
+                                                        {{ $sl->desc_en }}
+                                                    @else
+                                                        {{ $sl->desc_ar }}
+                                                    @endif
+                                                </p>
+                                            </div>
+                                            <div class="slider-button">
+                                                <a class="btn btn-flat btn-sm text-capitalize" href="{{ url('/services') }}">{{ __('app.more') }}</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="slider-desc">
-                                        <p>
-                                            @if(app()->getLocale() == 'en')
-                                                {{ $sl->desc_en }}
-                                            @else
-                                                {{ $sl->desc_ar }}
-                                            @endif
-                                        </p>
-                                    </div>
-                                    <div class="slider-button">
-                                        <a class="btn btn-flat btn-sm text-capitalize" href="{{ url('/services') }}">{{ __('app.more') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-                  </ul>
+                                </li>
+                            @endforeach
+                          </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     {{-- End slider section --}}
 
     {{-- Start services section --}}
     <section class="services">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row main-title">
                 <div class="services-title">
                     <h4 class="text-uppercase">{{ __('app.services') }}</h4>
@@ -102,7 +106,7 @@
 
     {{-- Start projects section --}}
     <section class="projects">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="projects-title">
@@ -166,7 +170,7 @@
 
     {{-- Start blogs section --}}
     <section class="blogs">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="blogs-title">

@@ -6,55 +6,59 @@
 <?php $__env->startSection('content'); ?>
 <div class="container-fluid p-0">
     
-    <div class="row m-0">
-        <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
-            <div class="splide__track h-100">
-                  <ul class="splide__list h-100">
-                    <?php $__currentLoopData = $slider; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sl): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <li class="splide__slide h-100">
-                            <div class="slider-all">
-                                <div class="slider-image">
-                                    <img class="img-fluid" src="<?php echo e(url('assets/upload/slider/'.$sl->image)); ?>" alt="Slider image 1">
-                                </div>
-                                <div class="slider-content">
-                                    <div class="slider-title">
-                                        <h2>
-                                            <?php if(app()->getLocale() == 'en'): ?>
-                                                <?php echo e($sl->title_en); ?>
+    <section class="home-slider">
+        <div class="container">
+            <div class="row m-0">
+                <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track h-100">
+                          <ul class="splide__list h-100">
+                            <?php $__currentLoopData = $slider; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sl): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <li class="splide__slide h-100">
+                                    <div class="slider-all">
+                                        <div class="slider-image">
+                                            <img class="img-fluid" src="<?php echo e(url('assets/upload/slider/'.$sl->image)); ?>" alt="Slider image 1">
+                                        </div>
+                                        <div class="slider-content">
+                                            <div class="slider-title">
+                                                <h2>
+                                                    <?php if(app()->getLocale() == 'en'): ?>
+                                                        <?php echo e($sl->title_en); ?>
 
-                                            <?php else: ?>
-                                                <?php echo e($sl->title_ar); ?>
+                                                    <?php else: ?>
+                                                        <?php echo e($sl->title_ar); ?>
 
-                                            <?php endif; ?>
-                                        </h2>
+                                                    <?php endif; ?>
+                                                </h2>
+                                            </div>
+                                            <div class="slider-desc">
+                                                <p>
+                                                    <?php if(app()->getLocale() == 'en'): ?>
+                                                        <?php echo e($sl->desc_en); ?>
+
+                                                    <?php else: ?>
+                                                        <?php echo e($sl->desc_ar); ?>
+
+                                                    <?php endif; ?>
+                                                </p>
+                                            </div>
+                                            <div class="slider-button">
+                                                <a class="btn btn-flat btn-sm text-capitalize" href="<?php echo e(url('/services')); ?>"><?php echo e(__('app.more')); ?></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="slider-desc">
-                                        <p>
-                                            <?php if(app()->getLocale() == 'en'): ?>
-                                                <?php echo e($sl->desc_en); ?>
-
-                                            <?php else: ?>
-                                                <?php echo e($sl->desc_ar); ?>
-
-                                            <?php endif; ?>
-                                        </p>
-                                    </div>
-                                    <div class="slider-button">
-                                        <a class="btn btn-flat btn-sm text-capitalize" href="<?php echo e(url('/services')); ?>"><?php echo e(__('app.more')); ?></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                  </ul>
+                                </li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                          </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     
 
     
     <section class="services">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row main-title">
                 <div class="services-title">
                     <h4 class="text-uppercase"><?php echo e(__('app.services')); ?></h4>
@@ -109,7 +113,7 @@
 
     
     <section class="projects">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="projects-title">
@@ -160,7 +164,7 @@
 
     
     <section class="blogs">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="blogs-title">

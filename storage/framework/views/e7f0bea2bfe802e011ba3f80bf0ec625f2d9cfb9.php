@@ -3,14 +3,6 @@
 
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('project-css'); ?>
-    <style>
-        .w-5 {
-            display: inline;
-        }
-    </style>
-<?php $__env->stopSection(); ?>
-
 <?php $__env->startSection('content'); ?>
 <div class="container-fluid p-0 m-0">
     <div class="projects-header" style="height: 200px; background-image: url('<?php echo e(asset('assets/upload/projects/'.$home->projects_bc)); ?>')">
