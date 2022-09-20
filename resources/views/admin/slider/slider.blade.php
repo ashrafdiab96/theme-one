@@ -84,6 +84,7 @@
                                             <th>Title (AR)</th>
                                             <th>Title (EN)</th>
                                             <th>Image</th>
+                                            <th>link</th>
                                             <th>Control Tools</th>
                                         </tr>
                                     </thead>
@@ -96,6 +97,7 @@
                                                 <td>
                                                     <img src="{{ asset('assets/upload/slider/'.$slider->image) }}" class="admin-service-img" alt="slider image">
                                                 </td>
+                                                <td>{{ $slider->link }}</td>
                                                 <td>
                                                     <a class="btn btn-warning btn-sm btn-flat" href="{{ url('admin/slider/edit/'.$slider->id) }}">
                                                         <i class="fas fa-edit"></i>

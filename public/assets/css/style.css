@@ -63,10 +63,14 @@ input[type=number] {
 
 .main-nav-cont {
     background-color: #fff;
-    height: 85px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.main-nav-cont a.nav-link {
+    font-size: 18px;
 }
 
 .new-nav-style {
@@ -75,7 +79,7 @@ input[type=number] {
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.9);
-    height: 55px !important;
+    height: 80px !important;
     width: 100%;
     z-index: 999;
     padding: 15px;
@@ -153,7 +157,7 @@ input[type=number] {
 }
 
 .new-logo {
-    height: 40px !important;
+    height: 70px !important;
 }
 
 /* End main navbar */

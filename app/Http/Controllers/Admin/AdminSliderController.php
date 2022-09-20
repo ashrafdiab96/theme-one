@@ -44,6 +44,7 @@ class AdminSliderController extends Controller
             $slider->title_en = $request->title_en;
             $slider->desc_ar = $request->desc_ar;
             $slider->desc_en = $request->desc_en;
+            $slider->link = $request->link;
             if($request->hasFile('image')) {
                 $image_name = time().'_'.$request->file('image')->getClientOriginalName();
                 $file_path = $request->file('image')->move('assets/upload/slider', $image_name);
@@ -84,6 +85,7 @@ class AdminSliderController extends Controller
             $slider->title_en = $request->title_en;
             $slider->desc_ar = $request->desc_ar;
             $slider->desc_en = $request->desc_en;
+            $slider->link = $request->link;
             if($request->hasFile('image')) {
                 $old_img = public_path('assets/upload/slider/'.$slider->image);
                 if(isset($slider->image)) {
