@@ -5,15 +5,9 @@
 
 <?php $__env->startSection('content'); ?>
 <div class="container-fluid p-0 m-0">
-    <div class="about-header" style="height: 200px; background-image: url('<?php echo e(asset('assets/upload/about/'.$about->background)); ?>')">
-        <div class="col-md-4 text-center">
-            <a href="<?php echo e(url('/')); ?>" class="text-uppercase p-0 m-0"><?php echo e(__('app.home')); ?></a>
-            <h3 class="text-capitalize p-0 m-0"><?php echo e(__('app.about')); ?></h3>
-        </div>
-        <div class="col-md-8"></div>
-    </div>
+    
     <div class="about-content">
-        <div class="container-fluid">
+        <div class="container">
             <div class="about-title">
                 <p class="text-capitalize text-muted"><?php echo e(__('app.who_we_are')); ?></p>
             </div>

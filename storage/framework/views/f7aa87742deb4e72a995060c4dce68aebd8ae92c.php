@@ -4,17 +4,11 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-<div class="container-fluid p-0 m-0">
-    <div class="contacts-header" style="height: 200px; background-image: url('<?php echo e(asset('assets/upload/contacts/'.$contacts->background)); ?>')">
-        <div class="col-md-4 text-center">
-            <a href="<?php echo e(url('/')); ?>" class="text-uppercase p-0 m-0"><?php echo e(__('app.home')); ?></a>
-            <h3 class="text-capitalize p-0 m-0"><?php echo e(__('app.contact')); ?></h3>
-        </div>
-        <div class="col-md-8"></div>
-    </div>
+<div class="container p-0 m-auto">
+    
 
     <div class="contacts-content">
-        <div class="container-fluid">
+        <div class="container p-0">
             <div class="row">
                 <div class="col-md-12 contacts-desc">
                     <p class="text-muted text-capitalize p-0 m-0"><?php echo e(__('app.why_us')); ?></p>
@@ -67,7 +61,7 @@
                             <h5 class="text-capitalize text-center"><?php echo e(__('app.we_contact_soon')); ?></h5>
                         </div>
                         <div class="form-group m-auto">
-                            <div class="container-fluid">
+                            <div class="container">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">

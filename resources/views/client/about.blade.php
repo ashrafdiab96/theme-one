@@ -6,15 +6,15 @@
 
 @section('content')
 <div class="container-fluid p-0 m-0">
-    <div class="about-header" style="height: 200px; background-image: url('{{ asset('assets/upload/about/'.$about->background) }}')">
+    {{-- <div class="about-header" style="height: 200px; background-image: url('{{ asset('assets/upload/about/'.$about->background) }}')">
         <div class="col-md-4 text-center">
             <a href="{{ url('/') }}" class="text-uppercase p-0 m-0">{{ __('app.home') }}</a>
             <h3 class="text-capitalize p-0 m-0">{{ __('app.about') }}</h3>
         </div>
         <div class="col-md-8"></div>
-    </div>
+    </div> --}}
     <div class="about-content">
-        <div class="container-fluid">
+        <div class="container">
             <div class="about-title">
                 <p class="text-capitalize text-muted">{{ __('app.who_we_are') }}</p>
             </div>

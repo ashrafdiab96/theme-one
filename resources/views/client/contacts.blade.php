@@ -5,17 +5,17 @@
 @endsection
 
 @section('content')
-<div class="container-fluid p-0 m-0">
-    <div class="contacts-header" style="height: 200px; background-image: url('{{ asset('assets/upload/contacts/'.$contacts->background) }}')">
+<div class="container p-0 m-auto">
+    {{-- <div class="contacts-header" style="height: 200px; background-image: url('{{ asset('assets/upload/contacts/'.$contacts->background) }}')">
         <div class="col-md-4 text-center">
             <a href="{{ url('/') }}" class="text-uppercase p-0 m-0">{{ __('app.home') }}</a>
             <h3 class="text-capitalize p-0 m-0">{{ __('app.contact') }}</h3>
         </div>
         <div class="col-md-8"></div>
-    </div>
+    </div> --}}
 
     <div class="contacts-content">
-        <div class="container-fluid">
+        <div class="container p-0">
             <div class="row">
                 <div class="col-md-12 contacts-desc">
                     <p class="text-muted text-capitalize p-0 m-0">{{ __('app.why_us') }}</p>
@@ -62,7 +62,7 @@
                             <h5 class="text-capitalize text-center">{{ __('app.we_contact_soon') }}</h5>
                         </div>
                         <div class="form-group m-auto">
-                            <div class="container-fluid">
+                            <div class="container">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">

@@ -684,7 +684,7 @@ input[type=number] {
 }
 
 .services-content {
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .services-content .service {
@@ -1083,7 +1083,7 @@ input[type=number] {
 }
 
 .blogs-content {
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .blogs-content .blog {
@@ -1272,7 +1272,7 @@ input[type=number] {
 }
 
 .contacts-content {
-    padding: 50px;
+    padding: 50px 0;
 }
 
 @media(max-width: 992px) {

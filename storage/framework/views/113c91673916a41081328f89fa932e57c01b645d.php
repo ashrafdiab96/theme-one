@@ -4,7 +4,7 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-<div class="container-fluid p-0 m-0">
+<div class="container p-0 m-auto">
     <div class="services-header" style="height: 200px; background-image: url('<?php echo e(asset('assets/upload/services/'.$home->services_bc)); ?>')">
         <div class="col-md-4 text-center">
             <a href="<?php echo e(url('/')); ?>" class="text-uppercase p-0 m-0"><?php echo e(__('app.home')); ?></a>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="services-content">
-        <div class="container-fluid">
+        <div class="container p-0">
             <div class="row">
                 <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-4">

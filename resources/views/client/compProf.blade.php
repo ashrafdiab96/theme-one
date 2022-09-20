@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container-fluid p-0 m-0">
+<div class="container p-0 m-auto">
     <div class="profile-header" style="height: 200px; background-image: url('{{ asset('assets/upload/profile/'.$profile->background) }}')">
         <div class="col-md-4 text-center">
             <a href="{{ url('/') }}" class="text-uppercase p-0 m-0">{{ __('app.home') }}</a>
@@ -15,8 +15,8 @@
     </div>
 </div>
 <div class="profile-content">
-    <div class="container-fluid">
-        <div class="profile-title">
+    <div class="container">
+    auto   <div class="profile-title">
             <h3 class="text-capitalize">{{ __('app.mission') }}</h3>
         </div>
         <div class="profile-desc">
@@ -30,8 +30,8 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="values-header">
+    <div class="container">
+    auto   <div class="values-header">
             <h3 class="text-capitalize">{{ __('app.our_values') }}</h3>
         </div>
         <div class="values-diagram">
@@ -48,8 +48,8 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="vision-title">
+    <div class="container">
+    auto   <div class="vision-title">
             <h3 class="text-capitalize">{{ __('app.vision') }}</h3>
         </div>
         <div class="vision-desc">
@@ -63,8 +63,8 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="strength-title">
+    <div class="container">
+    auto   <div class="strength-title">
             <h3 class="text-capitalize">{{ __('app.strength') }}</h3>
         </div>
         <div class="strength-desc">

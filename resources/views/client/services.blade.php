@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container-fluid p-0 m-0">
+<div class="container p-0 m-auto">
     <div class="services-header" style="height: 200px; background-image: url('{{ asset('assets/upload/services/'.$home->services_bc) }}')">
         <div class="col-md-4 text-center">
             <a href="{{ url('/') }}" class="text-uppercase p-0 m-0">{{ __('app.home') }}</a>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="services-content">
-        <div class="container-fluid">
+        <div class="container p-0">
             <div class="row">
                 @foreach ($services as $service)
                     <div class="col-md-4">
