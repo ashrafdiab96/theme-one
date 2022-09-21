@@ -1,107 +1,67 @@
-<footer class="footer">
-    <div class="container footer-cont p-5">
+<footer class="new-footer">
+    <div class="container new-footer-cont">
         <div class="row">
-            <div class="mouse">
-                <a href="#" class="mouse-icon">
-                    <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-3">
-                <div class="ftco-footer-widget">
-                    <h3 class="text-capitalize mb-3">
-                        {{-- <i class="fas fa-hard-hat"></i> --}}
-                        {{-- {{ __('app.f_d') }} --}}
-                        <img class="footer_logo" src="{{ asset('assets/upload/home/'.$footer_logo) }}" alt="Logo">
-                    </h3>
-                    <div class="footer-logo-desc">
-                        {{-- <h4 class="text-capitalize">{{ __('app.why_us') }}</h4> --}}
-                        <p class="">
-                            @if (app()->getLocale() == 'en')
-                                {!! $contacts->why_us !!}
-                            @else
-                                {!! $contacts->why_us_ar !!}
-                            @endif
-                        </p>
+            <div class="col-md-11">
+                <div class="row">
+                    <div class="col-md-2 text-capitalize">
+                        <a href="{{ url('/about') }}" class="footer-item">
+                            {{ __('app.about') }}
+                        </a>
+                    </div>
+                    <div class="col-md-2 text-capitalize">
+                        <a href="{{ url('/profile') }}" class="footer-item">
+                            {{ __('app.profile') }}
+                        </a>
+                    </div>
+                    <div class="col-md-2 text-capitalize">
+                        <a href="{{ url('/services') }}" class="footer-item">
+                            {{ __('app.serv') }}
+                        </a>
+                    </div>
+                    <div class="col-md-2 text-capitalize">
+                        <a href="{{ url('/projects') }}" class="footer-item">
+                            {{ __('app.projects') }}
+                        </a>
+                    </div>
+                    <div class="col-md-2 text-capitalize">
+                        <a href="{{ url('/blogs') }}" class="footer-item">
+                            {{ __('app.blog') }}
+                        </a>
+                    </div>
+                    <div class="col-md-2 text-capitalize">
+                        <a href="{{ url('/contacts') }}" class="footer-item">
+                            {{ __('app.contact') }}
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="ftco-footer-widget ml-md-5">
-                    <h2 class="text-capitalize mb-3">
-                        <i class="fas fa-link"></i>
-                        {{ __('app.links') }}
-                    </h2>
-                    <ul class="list-unstyled w-75 m-auto">
-                        {{-- <li class="footer-item">
-                            <a href="{{ url('/') }}" class="footer-link text-capitalize">
-                                {{ __('app.home') }}
-                            </a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ url('/about') }}" class="footer-link text-capitalize">
-                                {{ __('app.about') }}
-                            </a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ url('/profile') }}" class="footer-link text-capitalize">
-                                {{ __('app.profile') }}
-                            </a>
-                        </li> --}}
-                        <li class="footer-item">
-                            <a href="{{ url('/services') }}" class="footer-link text-capitalize">
-                                {{ __('app.serv') }}
-                            </a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ url('/projects') }}" class="footer-link text-capitalize">
-                                {{ __('app.projects') }}
-                            </a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ url('/blogs') }}" class="footer-link text-capitalize">
-                                {{ __('app.blog') }}
-                            </a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ url('/contacts') }}" class="footer-link text-capitalize">
-                                {{ __('app.contact') }}
-                            </a>
-                        </li>
-                    </ul>
+            <div class="col-md-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="{{ $contacts->ln_url }}" target="_blank" title="LinkedIn">
+                            <img class="linkedin-img" src="{{ asset('assets/icons/linkedin.png') }}" alt="linkedin">
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            {{-- <div class="col-md-3">
-                <div class="ftco-footer-widget ml-md-5">
-                    <h2 class="text-capitalize mb-3">
-                        <i class="fab fa-servicestack"></i>
-                        {{ __('app.serv') }}
-                    </h2>
-                    <ul class="list-unstyled w-75 m-auto">
-                        @foreach ($services_share as $ser)
-                            <li class="footer-item">
-                                <a href="{{ url('service/'.$ser->id) }}" class="footer-link text-capitalize">
-                                    @if (app()->getLocale() == 'en')
-                                        {{ Str::limit($ser->name_en, 15) }}
-                                    @else
-                                        {{ Str::limit($ser->name_ar, 15) }}
-                                    @endif
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="new-footer-about">
+                    @if (app()->getLocale() == 'en')
+                        {!! $contacts->why_us !!}
+                    @else
+                        {!! $contacts->why_us_ar !!}
+                    @endif
                 </div>
-            </div> --}}
-
-            <div class="col-md-3">
-                <div class="ftco-footer-widget">
-                    <h2 class="text-capitalize mb-3">
+            </div>
+            <div class="col-md-4">
+                <div class="new-footer-about">
+                    {{-- <h2 class="text-capitalize mb-3">
                         <i class="fas fa-address-card"></i>
                         {{ __('app.contact') }}
-                    </h2>
+                    </h2> --}}
                     <div class="block-23">
                         <ul class="list-unstyled">
                             <li class="footer-contact-item">
@@ -114,12 +74,12 @@
                                     @endif
                                 </span>
                             </li>
-                            <li class="footer-contact-item">
+                            {{-- <li class="footer-contact-item">
                                 <span>
                                     <i class="fas fa-phone"></i>
                                     {{ $contacts->mobile }}
                                 </span>
-                            </li>
+                            </li> --}}
                             <li class="footer-contact-item">
                                 <span>
                                     <i class="fas fa-envelope"></i>
@@ -133,35 +93,17 @@
                     </div> --}}
                 </div>
             </div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="text-center footer-icons">
-            {{-- <a href="{{ $contacts->fb_url }}" target="_blank">
-                <img src="{{ asset('assets/icons/facebook.png') }}" alt="facebook">
-            </a> --}}
-            <a href="{{ $contacts->ln_url }}" target="_blank">
-                <img src="{{ asset('assets/icons/linkedin.png') }}" alt="linkedin">
-            </a>
-            {{-- <a href="{{ $contacts->tw_url }}" target="_blank">
-                <img src="{{ asset('assets/icons/twitter.png') }}" alt="twitter">
-            </a>
-            <a href="{{ $contacts->in_url }}" target="_blank">
-                <img src="{{ asset('assets/icons/instagram.png') }}" alt="instagram">
-            </a>
-            <a href="{{ $contacts->yu_url }}" target="_blank">
-                <img src="{{ asset('assets/icons/youtube.png') }}" alt="youtube">
-            </a> --}}
+            <div class="col-md-2"></div>
         </div>
     </div>
-
-    <div class="container-fluid copy-footer">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p class="m-0 p-3">
-                    {{ __('app.copyright') }} &copy;<script>document.write(new Date().getFullYear());</script>&copy; {{ __('app.rights_reserved') }} | {{ __('app.f_d') }} </a>
-                </p>
-            </div>
-        </div>
-    </div>
-
 </footer>
+
+<div class="container-fluid new-copy-div p-0">
+    <div class="new-copy-footer">
+        <div class="col-md-12 text-center">
+            <p class="m-0 p-3">
+                {{ __('app.copyright') }} &copy;<script>document.write(new Date().getFullYear());</script>&copy; {{ __('app.rights_reserved') }} | {{ __('app.f_d') }} </a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -239,6 +239,79 @@ input[type=number] {
 
 /* End footer */
 
+/* Start new footer */
+
+.new-footer {
+    background-color: #1A1818;
+    padding: 40px 40px 20px 40px;
+}
+
+.new-footer a.footer-item {
+    border: 1px solid transparent;
+    padding: 5px 30px;
+    background-color: #2D2C2D;
+    color: #8a8a8a !important;
+}
+
+.new-footer a.footer-item:hover {
+    color: #ccc !important;
+    text-decoration: none;
+}
+
+/* .new-footer a.footer-item::before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 100%;
+    border-right: 4px solid #41484B;
+    left: -4px;
+    top: 0;
+    border-left: 1px solid #41484B;
+    margin-left: 10px;
+}
+
+.new-footer a.footer-item::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100%;
+    right: -7px;
+    top: 0;
+    border-right: 3px solid #41484B;
+} */
+
+.new-footer-about {
+    padding: 30px 0 0 0;
+    color: #A4A6A8 !important;
+    font-weight: 100;
+}
+
+.new-footer-about * {
+    color: #A4A6A8 !important;
+}
+
+.linkedin-img {
+    height: 35px;
+    width: 35px;
+    margin-top: -6px;
+    filter: grayscale(1);
+}
+
+.new-copy-div {
+    background-color: #1A1818;
+}
+
+.new-copy-footer {
+    background-color: rgba(0,0,0,.5);
+    color: rgba(255,255,255,.5);
+}
+
+.new-copy-footer p {
+    word-spacing: 4px;
+    letter-spacing: 2px;
+}
+
+/* End new footer */
 
 /* Start home page */
 
