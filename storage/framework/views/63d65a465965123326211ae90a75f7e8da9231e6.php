@@ -5,7 +5,7 @@
 
 <?php $__env->startSection('content'); ?>
 <div class="container p-0 m-auto">
-    <div class="profile-header" style="height: 200px; background-image: url('<?php echo e(asset('assets/upload/profile/'.$profile->background)); ?>')">
+    <div class="profile-header" style="height: 400px; background-image: url('<?php echo e(asset('assets/upload/profile/'.$profile->background)); ?>')">
         <div class="col-md-4 text-center">
             <a href="<?php echo e(url('/')); ?>" class="text-uppercase p-0 m-0"><?php echo e(__('app.home')); ?></a>
             <h3 class="text-capitalize p-0 m-0"><?php echo e(__('app.cmp_prof')); ?></h3>
@@ -15,7 +15,7 @@
 </div>
 <div class="profile-content">
     <div class="container">
-    auto   <div class="profile-title">
+       <div class="profile-title">
             <h3 class="text-capitalize"><?php echo e(__('app.mission')); ?></h3>
         </div>
         <div class="profile-desc">
@@ -32,7 +32,7 @@
     </div>
 
     <div class="container">
-    auto   <div class="values-header">
+       <div class="values-header">
             <h3 class="text-capitalize"><?php echo e(__('app.our_values')); ?></h3>
         </div>
         <div class="values-diagram">
@@ -50,7 +50,7 @@
     </div>
 
     <div class="container">
-    auto   <div class="vision-title">
+       <div class="vision-title">
             <h3 class="text-capitalize"><?php echo e(__('app.vision')); ?></h3>
         </div>
         <div class="vision-desc">
@@ -67,7 +67,7 @@
     </div>
 
     <div class="container">
-    auto   <div class="strength-title">
+       <div class="strength-title">
             <h3 class="text-capitalize"><?php echo e(__('app.strength')); ?></h3>
         </div>
         <div class="strength-desc">

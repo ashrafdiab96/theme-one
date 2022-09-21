@@ -317,7 +317,7 @@ input[type=number] {
 
 .services {
     /* background-color: gray; */
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .services .main-title {
@@ -451,7 +451,7 @@ input[type=number] {
 }
 
 .projects {
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .projects .project {
@@ -574,7 +574,7 @@ input[type=number] {
     content: ' ';
     background-color: #e5e3e3;
     display: block;
-    width: 85%;
+    width: 100%;
     margin: auto;
 }
 
@@ -1287,6 +1287,16 @@ input[type=number] {
     height: 1px;
     width: 100%;
     background-color: rgba(0, 0, 0, .1);
+}
+
+.contacts-content .location h3,
+.contacts-content .communication h3 {
+    font-size: 20px;
+}
+
+.contacts-content .location p,
+.contacts-content .communication p {
+    font-size: 14px;
 }
 
 .contacts-content .location .loc-title::after {

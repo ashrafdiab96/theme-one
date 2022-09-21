@@ -33,9 +33,11 @@
             </div>
         </div>
     </div>
-    <hr class="about-content-line">
+    <div class="container">
+        <hr class="about-content-line">
+    </div>
     <div class="founder" style="background-color: <?php echo e($about->founder_bc); ?>; color: <?php echo e($about->founder_color); ?>;">
-        <div class="container-fluid">
+        <div class="container p-0">
             <div class="row">
                 <div class="col-md-3 text-center">
                     <img src="<?php echo e(asset('assets/upload/about/'.$about->founder_1_img)); ?>" alt="Founder Image">

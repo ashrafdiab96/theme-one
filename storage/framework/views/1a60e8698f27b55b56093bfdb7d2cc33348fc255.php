@@ -4,10 +4,10 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-<div class="container-fluid p-0">
+<div class="container p-0">
     
-    <section class="home-slider px-5">
-        <div class="container-fluid">
+    <section class="home-slider">
+        <div class="container">
             <div class="row m-0">
                 <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
                     <div class="splide__track h-100">
@@ -58,7 +58,7 @@
 
     
     <section class="services">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row main-title">
                 <div class="services-title">
                     <h4 class="text-uppercase"><?php echo e(__('app.services')); ?></h4>
@@ -113,7 +113,7 @@
 
     
     <section class="projects">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="projects-title">
@@ -164,7 +164,7 @@
 
     
     <section class="blogs">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="blogs-title">

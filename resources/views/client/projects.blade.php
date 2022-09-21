@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container-fluid p-0 m-0">
+<div class="container p-0 m-auto">
     {{-- <div class="projects-header" style="height: 200px; background-image: url('{{ asset('assets/upload/projects/'.$home->projects_bc) }}')">
         <div class="col-md-4 text-center">
             <a href="{{ url('/') }}" class="text-uppercase p-0 m-0">{{ __('app.home') }}</a>
@@ -14,7 +14,7 @@
         <div class="col-md-8"></div>
     </div> --}}
 
-    <div class="projects-type">
+    {{-- <div class="projects-type">
         <div class="container">
             <div class="types">
                 @foreach ($projectsTypes as $type)
@@ -28,10 +28,10 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="projects-content">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 @foreach ($projects as $project)
                     <div class="col-md-4">
@@ -57,11 +57,11 @@
                     </div>
                 @endforeach
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <span>
                     {{ $projects->links() }}
                 </span>
-            </div>
+            </div> --}}
         </div>
     </div>
 

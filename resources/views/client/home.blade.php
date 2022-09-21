@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-<div class="container-fluid p-0">
+<div class="container p-0">
     {{-- Start slider section --}}
-    <section class="home-slider px-5">
-        <div class="container-fluid">
+    <section class="home-slider">
+        <div class="container">
             <div class="row m-0">
                 <div id="slider-splide" class="splide home-slider" role="group" aria-label="Splide Basic HTML Example">
                     <div class="splide__track h-100">
@@ -55,7 +55,7 @@
 
     {{-- Start services section --}}
     <section class="services">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row main-title">
                 <div class="services-title">
                     <h4 class="text-uppercase">{{ __('app.services') }}</h4>
@@ -106,7 +106,7 @@
 
     {{-- Start projects section --}}
     <section class="projects">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="projects-title">
@@ -170,7 +170,7 @@
 
     {{-- Start blogs section --}}
     <section class="blogs">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="blogs-title">
