@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container p-0 m-auto">
-    <div class="service-header" style="height: 200px; background-image: url('{{ asset('assets/upload/services/'.$service->background) }}')">
+    {{-- <div class="service-header" style="height: 200px; background-image: url('{{ asset('assets/upload/services/'.$service->background) }}')">
         <div class="col-md-4 text-center">
             <a href="{{ url('/') }}" class="text-uppercase p-0 m-0">{{ __('app.home') }}</a>
             <h3 class="text-capitalize p-0 m-0">
@@ -18,7 +18,7 @@
             </h3>
         </div>
         <div class="col-md-8"></div>
-    </div>
+    </div> --}}
 
     <div class="service-page-content">
         <div class="container">
