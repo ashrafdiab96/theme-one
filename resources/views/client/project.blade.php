@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container-fluid p-0 m-0">
+<div class="container p-0 m-auto">
     {{-- <div class="project-header" style="height: 200px; background-image: url('{{ asset('assets/upload/projects/'.$project->background) }}')">
         <div class="col-md-4 text-center">
             <a href="{{ url('/') }}" class="text-uppercase p-0 m-0">{{ __('app.home') }}</a>
@@ -21,7 +21,7 @@
     </div> --}}
 
     <div class="project-page-content">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-9">
                     <div class="project-page-title mb-4">
